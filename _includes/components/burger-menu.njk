@@ -1,0 +1,42 @@
+<!--
+Derived from by Erik Terwan
+https://codepen.io/erikterwan/pen/EVzeRP
+
+also see:
+https://codepen.io/ibnalkhwarizmi/pen/EremLG
+-->
+<nav role="navigation">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+
+    <!--
+    Spans for hamburger.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <a href="/"><li>Home</li></a>
+      <a href="/work"><li>Work</li></a>
+      <a href="/interests"><li>Interests</li></a>
+      <a href="/contact"><li>Contact</li></a>
+    </ul>
+  </div>
+</nav>
+
+<!-- <ul class="menu">
+  <li class="menu-item"><a href="/">About</a></li>
+  <li class="menu-item"><a href="/work">Work</a></li>
+  <li id="logotype">c.y</li>
+  <li class="menu-item"><a href="/interests">Interests</a></li>
+  <li class="menu-item">Contact</li>
+</ul> -->

@@ -1,0 +1,8 @@
+<ul class="works">
+{% for work in works %}
+  <li class="works-item">
+    <h1><a href="{{ work.link }}">{{ work.name }}</a></h1>
+    <p>{{ work.description }}</p>
+  </li>
+{% endfor %}
+</ul>

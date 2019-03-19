@@ -1,0 +1,17 @@
+{
+  "name": "casey-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "_site/index.html",
+  "scripts": {
+    "dev": "npx eleventy --serve",
+    "build": "npx eleventy",
+    "start": "npm run dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "github:11ty/eleventy",
+    "clean-css": "^4.2.1"
+  }
+}

@@ -1,0 +1,182 @@
+html {
+  box-sizing: border-box;
+}
+
+/** {
+  padding: 0;
+  margin: 0;
+}*/
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  font-family: 'Karla', sans-serif;
+
+  /*font-family: 'Open Sans', sans-serif;*/
+
+  font-size: 16px;
+  /*max-width: 960px;*/
+  /*padding: 1.5em;*/
+  margin: auto;
+  background: black;
+  color: white;
+  /*border: 1em solid yellow;*/
+}
+
+a {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:active {
+  color: lightgray;
+}
+
+h1, h2 {
+  font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+  font-size: 2.7em;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  max-width: 980px;
+}
+
+/*#container img {
+  width: 100%;
+}*/
+
+#logotype {
+  text-transform: uppercase;
+  font-size: 3em;
+  margin: 0 1em;
+}
+
+.centered {
+  text-align: center;
+}
+
+.em-note {
+  font-family: 'Rubik', sans-serif;
+  font-style: italic;
+  text-align: center;
+  margin: 2em 0;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: bolder;
+  /*margin: 2.5em 5em;*/
+}
+
+.menu > * {
+  flex: 1 1 80px;
+  text-transform: uppercase;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.menu-item a {
+  text-decoration: none;
+}
+
+.menu-item a:visited {
+  color: inherit;
+}
+
+.works h1 {
+  margin: 0.5em 0 0 0;
+  padding: 0;
+}
+
+.works p {
+  padding: 0;
+  margin: 0.5em 0 2em 0;
+}
+
+.works h1 a {
+  text-decoration: none;
+}
+
+.works h1 a:hover {
+  text-decoration: underline;
+}
+
+.works-item {
+  border-top: 1px solid #616161;
+  text-align: center;
+}
+
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.interest {
+  min-width: 250px;
+  flex: 1;
+}
+
+.project-summary {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-summary > * {
+  flex: 1 1 150px;
+}
+
+@media (max-width: 760px) {
+  h1 {
+    font-size: 2em;
+    margin: 0.4em 0;
+  }
+}
+
+.round-image {
+  width: 4em;
+  height: 4em;
+  border-radius: 2em;
+  object-fit: cover;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*border: 1px solid red;*/
+  z-index: -1;
+}
+
+section {
+  margin-bottom: 5em;
+}
+.social-icons {
+  font-size: 2em;
+}

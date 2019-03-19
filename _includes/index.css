@@ -17,21 +17,21 @@ body {
 
   /*font-family: 'Open Sans', sans-serif;*/
 
-  font-size: 16px;
+  font-size: 18px;
   /*max-width: 960px;*/
   /*padding: 1.5em;*/
-  margin: auto;
-  background: black;
-  color: white;
+  /*margin: auto;*/
+  /*background: black;*/
+  /*color: black;*/
   /*border: 1em solid yellow;*/
 }
 
 a {
-  color: white;
+  /*color: white;*/
 }
 
 a:visited {
-  color: white;
+  color: black;
 }
 
 a:active {
@@ -51,10 +51,10 @@ h2 {
   font-size: 1.2em;
 }
 
-h3 {
+/*h3 {
   text-transform: uppercase;
   font-size: 0.8em;
-}
+}*/
 
 ul, li {
   list-style: none;
@@ -64,11 +64,32 @@ ul, li {
 
 #container {
   max-width: 980px;
+  margin: auto;
 }
 
-/*#container img {
+#container img {
   width: 100%;
-}*/
+}
+
+.video-raw-wrapper {
+  width: 100%;
+}
+
+.video-raw {
+  width: 100%;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  /*padding-top: 25px;*/
+  height: 0;
+}
+.video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
 #logotype {
   text-transform: uppercase;
@@ -159,9 +180,9 @@ ul, li {
   }
 }
 
-.round-image {
-  width: 4em;
-  height: 4em;
+.round-avatar {
+  width: 6em;
+  height: 6em;
   border-radius: 2em;
   object-fit: cover;
 }

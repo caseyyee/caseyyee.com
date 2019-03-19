@@ -17,7 +17,7 @@ Deep design and technology understanding.
 -->
 
 <section id="intro">
-  <img class="round-image" src="{{ "/img/casey.jpg" | url }}">
+  <img class="round-avatar" src="{{ "/img/casey.jpg" | url }}">
 
   <h1>Hello! I'm Casey, a designer that writes code in Vancouver BC. I want to make the things that are in my head.</h1>
 
@@ -45,136 +45,136 @@ Deep design and technology understanding.
 
 <script src="/js/three.min.js"></script>
 <script>
-  var scene = new THREE.Scene();
-  var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
-  camera.position.z = 15;
-  //camera.rotation.x = Math.PI/8;
+  // var scene = new THREE.Scene();
+  // var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
+  // camera.position.z = 15;
+  // //camera.rotation.x = Math.PI/8;
 
-  var renderer = new THREE.WebGLRenderer();
-  renderer.setClearColor('#DCDDE1')
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  document.body.appendChild(renderer.domElement);
+  // var renderer = new THREE.WebGLRenderer();
+  // renderer.setClearColor('#DCDDE1')
+  // renderer.setSize(window.innerWidth, window.innerHeight);
+  // document.body.appendChild(renderer.domElement);
 
-  window.addEventListener('resize', onWindowResize, false);
+  // window.addEventListener('resize', onWindowResize, false);
 
-  // scene bounds
-  const sceneBounds = new THREE.Vector3(50, 100, 100);
+  // // scene bounds
+  // const sceneBounds = new THREE.Vector3(50, 100, 100);
 
-  const between = (min, max) => {
-    return Math.random() * (max - min + 1) + min;
-  }
+  // const between = (min, max) => {
+  //   return Math.random() * (max - min + 1) + min;
+  // }
 
-  // boxes
-  var geometry = new THREE.BoxGeometry(1, 10, 1);
-  // var geometry = new THREE.ConeGeometry( 3, 6, 32 );
-  // var geometry = new THREE.DodecahedronBufferGeometry(3);
+  // // boxes
+  // var geometry = new THREE.BoxGeometry(1, 10, 1);
+  // // var geometry = new THREE.ConeGeometry( 3, 6, 32 );
+  // // var geometry = new THREE.DodecahedronBufferGeometry(3);
 
-  var material = new THREE.MeshLambertMaterial({color: '#DCDDE1'});
+  // var material = new THREE.MeshLambertMaterial({color: '#DCDDE1'});
 
 
   
-  //var material = new THREE.MeshBasicMaterial({color: '#4DB1D4'});
-  // const material = new THREE.ShaderMaterial({
-  //     uniforms: {
-  //       color1: {
-  //         value: new THREE.Color('#DCDDE1')
-  //       },
-  //       color2: {
-  //         value: new THREE.Color('#8D99A8')
-  //       }
-  //     },
-  //     vertexShader: `
-  //       varying vec2 vUv;
-  //       void main() {
-  //         vUv = uv;
-  //         gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0);
-  //       }
-  //     `,
-  //     fragmentShader: `
-  //       uniform vec3 color1;
-  //       uniform vec3 color2;
-  //       varying vec2 vUv;
-  //       void main() {
-  //         gl_FragColor = vec4(mix(color1, color2, vUv.y), 1.0);
-  //       }
-  //     `,
-  //     side: THREE.BackSide,
-  //     wireframe: false
+  // //var material = new THREE.MeshBasicMaterial({color: '#4DB1D4'});
+  // // const material = new THREE.ShaderMaterial({
+  // //     uniforms: {
+  // //       color1: {
+  // //         value: new THREE.Color('#DCDDE1')
+  // //       },
+  // //       color2: {
+  // //         value: new THREE.Color('#8D99A8')
+  // //       }
+  // //     },
+  // //     vertexShader: `
+  // //       varying vec2 vUv;
+  // //       void main() {
+  // //         vUv = uv;
+  // //         gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0);
+  // //       }
+  // //     `,
+  // //     fragmentShader: `
+  // //       uniform vec3 color1;
+  // //       uniform vec3 color2;
+  // //       varying vec2 vUv;
+  // //       void main() {
+  // //         gl_FragColor = vec4(mix(color1, color2, vUv.y), 1.0);
+  // //       }
+  // //     `,
+  // //     side: THREE.BackSide,
+  // //     wireframe: false
+  // //   });
+
+  // const meshes = [];
+
+  // for (var i = 0; i < 100; i++) {
+  //   const cube = new THREE.Mesh(geometry, material);
+  //   cube.position.set(between(-sceneBounds.x, sceneBounds.x),
+  //     between(-sceneBounds.y, sceneBounds.y), 0);
+  //     //between(-sceneBounds.z, sceneBounds.z));
+  //   scene.add(cube);
+  //   meshes.push(cube);
+  // }
+
+  // scene.add(new THREE.AmbientLight('#cfcfcf'));
+  // const light = new THREE.DirectionalLight('#fff', 1);
+  // light.position.set(-100, 100, 40);
+  // scene.add(light);
+
+  // // sky
+  // // const gradientMat = new THREE.ShaderMaterial({
+  // //     uniforms: {
+  // //       color1: {
+  // //         value: new THREE.Color('#4DB1D4')
+  // //       },
+  // //       color2: {
+  // //         value: new THREE.Color('#4DB1D4')
+  // //       }
+  // //     },
+  // //     vertexShader: `
+  // //       varying vec2 vUv;
+  // //       void main() {
+  // //         vUv = uv;
+  // //         gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0);
+  // //       }
+  // //     `,
+  // //     fragmentShader: `
+  // //       uniform vec3 color1;
+  // //       uniform vec3 color2;
+  // //       varying vec2 vUv;
+  // //       void main() {
+  // //         gl_FragColor = vec4(mix(color1, color2, vUv.y), 1.0);
+  // //       }
+  // //     `,
+  // //     side: THREE.BackSide,
+  // //     wireframe: false
+  // //   });
+  // // scene.add(new THREE.Mesh(
+  // //   new THREE.SphereBufferGeometry(800, 32, 32),
+  // //   gradientMat));
+
+  // animate();
+
+  // function animate() {
+  //   requestAnimationFrame(animate);
+  //   meshes.forEach((mesh) => {
+  //     mesh.position.y += 0.05;
+  //     if (mesh.position.y > sceneBounds.y) {
+  //       mesh.position.y = -sceneBounds.y;
+  //     }
+
+  //     // mesh.rotation.z += 0.001;
+  //     // mesh.rotation.x += 0.001;
+  //     // mesh.rotation.x += 0.001;
   //   });
+  //   // cube.rotation.x += 0.005;
+  //   // cube.rotation.y += 0.01;
+  //   // camera.rotation.y += 0.001;
+  //   renderer.render(scene, camera);
+  // }
 
-  const meshes = [];
-
-  for (var i = 0; i < 100; i++) {
-    const cube = new THREE.Mesh(geometry, material);
-    cube.position.set(between(-sceneBounds.x, sceneBounds.x),
-      between(-sceneBounds.y, sceneBounds.y), 0);
-      //between(-sceneBounds.z, sceneBounds.z));
-    scene.add(cube);
-    meshes.push(cube);
-  }
-
-  scene.add(new THREE.AmbientLight('#cfcfcf'));
-  const light = new THREE.DirectionalLight('#fff', 1);
-  light.position.set(-100, 100, 40);
-  scene.add(light);
-
-  // sky
-  // const gradientMat = new THREE.ShaderMaterial({
-  //     uniforms: {
-  //       color1: {
-  //         value: new THREE.Color('#4DB1D4')
-  //       },
-  //       color2: {
-  //         value: new THREE.Color('#4DB1D4')
-  //       }
-  //     },
-  //     vertexShader: `
-  //       varying vec2 vUv;
-  //       void main() {
-  //         vUv = uv;
-  //         gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0);
-  //       }
-  //     `,
-  //     fragmentShader: `
-  //       uniform vec3 color1;
-  //       uniform vec3 color2;
-  //       varying vec2 vUv;
-  //       void main() {
-  //         gl_FragColor = vec4(mix(color1, color2, vUv.y), 1.0);
-  //       }
-  //     `,
-  //     side: THREE.BackSide,
-  //     wireframe: false
-  //   });
-  // scene.add(new THREE.Mesh(
-  //   new THREE.SphereBufferGeometry(800, 32, 32),
-  //   gradientMat));
-
-  animate();
-
-  function animate() {
-    requestAnimationFrame(animate);
-    meshes.forEach((mesh) => {
-      mesh.position.y += 0.05;
-      if (mesh.position.y > sceneBounds.y) {
-        mesh.position.y = -sceneBounds.y;
-      }
-
-      // mesh.rotation.z += 0.001;
-      // mesh.rotation.x += 0.001;
-      // mesh.rotation.x += 0.001;
-    });
-    // cube.rotation.x += 0.005;
-    // cube.rotation.y += 0.01;
-    // camera.rotation.y += 0.001;
-    renderer.render(scene, camera);
-  }
-
-  function onWindowResize() {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-  }
+  // function onWindowResize() {
+  //   camera.aspect = window.innerWidth / window.innerHeight;
+  //   camera.updateProjectionMatrix();
+  //   renderer.setSize(window.innerWidth, window.innerHeight);
+  // }
 </script>
 
 <!-- <h1>I'm Casey Yee, a designer that writes code for <a href="www.mozilla.org">Mozilla</a> based out of Vancouver BC, working on AR, VR and browser tech to make interesting things.</h1>

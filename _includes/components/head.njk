@@ -1,0 +1,51 @@
+<!--
+       )   ___
+      (__/_____)
+        /       _   _    _
+       /       (_(_/_)__(/_(_/_
+      (______)            .-/
+                         (_/
+        __     __)
+       (, )   /
+         /   /  _   _
+        (___/__(/__(/_
+       )   /
+      (__ /
+
+      Thanks for looking!
+
+      Email: caseyyee.ca@gmail.com
+      Twitter: whoyee
+
+      Make your own: http://www.patorjk.com/software/taag/
+  -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" crossorigin="anonymous">
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:700|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet"> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Karla|Rubik" rel="stylesheet"> 
+
+  {%- set css %}
+  {% include 'index.css' %}
+  {% endset %}
+  <style>{{ css | cssmin | safe }}</style>
+
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:site" content="www.caseyyee.com"/>
+  <meta name="twitter:title" content="{{ title }}"/>
+  <meta name="twitter:creator" content="@whoyee" />
+  <meta name="twitter:description" content="{{ description }}"/>
+  <meta name="twitter:image" content="https://mysite.com/images/profile-image.png"/>
+
+  <!-- todo add GA -->
+  <!-- todo add FB -->
+</head>

@@ -1,6 +1,6 @@
 ---
-layout: base.njk
-title: c.y
+layout: post.njk
+title: Casey Yee - WebVR Content Tools
 ---
 
 # WebVR Content Tools

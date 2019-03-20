@@ -3,10 +3,12 @@
 {% include "components/head.njk" %}
 
 <body>
-  {% include "components/menu.njk" %}
   <div id="container">
-  {{ content | safe }}
+    {% include "components/menu.njk" %}
+
+    {{ content | safe }}
+
+    {% include "components/footer.njk" %}
   </div>
-  {% include "components/footer.njk" %}
 </body>
 </html>

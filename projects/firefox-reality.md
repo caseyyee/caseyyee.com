@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: post.njk
 title: Casey Yee - Firefox Reality VR Web Browser
 ---
 

@@ -27,8 +27,11 @@ and the momentum continues to grow, but experiences would be dominated by tools 
 At its earliest stages working with Vlad Vukecevic, WebVR started as a simple extension to the 2D desktop browsing experience. When _Entering VR_, content would be stereoscopically rendered using WebGL into the attatched VR headset.
 
 ![Desktop WebVR on Firefox using Oculus DK2 VR headset](/img/desktop-vr.gif)
-
 *MozVR website running "Sechelt" experience on Desktop Firefox in WebVR using Oculus DK2 VR headset*
+
+![Ben Lang from RoadToVR trying out Rainbow Membrand by Cabbibo](/img/rainbow-membrane.jpg)
+*Ben Lang from RoadToVR trying out Rainbow Membrand by Cabbibo*
+
 
 ### HIRO
 

@@ -1,14 +1,10 @@
-html {
-  box-sizing: border-box;
-}
-
-/** {
-  padding: 0;
-  margin: 0;
-}*/
-
 :root {
   --max-layout-width: 800px;
+  --link-color: #007CCE;
+}
+
+html {
+  box-sizing: border-box;
 }
 
 *, *:before, *:after {
@@ -16,28 +12,23 @@ html {
 }
 
 body {
-  position: relative;
-  font-family: 'Karla', sans-serif;
-
-  /*font-family: 'Open Sans', sans-serif;*/
-
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
-  line-height: 26px;
-  /*max-width: 960px;*/
-  padding: 1em;
+  /*line-height: 26px;*/
+  padding: 0;
   margin: 0;
   /*margin: auto;*/
-  /*background: black;*/
+  background: #F1F2F7;
   /*color: black;*/
   /*border: 1em solid yellow;*/
 }
 
 a {
-  /*color: white;*/
+  color: var(--link-color);
 }
 
 a:visited {
-  color: black;
+  color: var(--link-color);
 }
 
 a:active {
@@ -45,37 +36,45 @@ a:active {
 }
 
 h1, h2 {
-  font-family: 'Rubik', sans-serif;
 }
 
 h1 {
-  font-size: 2.7em;
+  font-size: 2.5em;
   line-height: 1.2em;
   font-weight: normal;
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.7em;
+  line-height: 1.2em;
+  font-weight: 700;
 }
 
-/*h3 {
-  text-transform: uppercase;
-  font-size: 0.8em;
-}*/
+h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+}
 
 ul, li {
-  /*list-style: none;*/
-  /*margin: 0;
-  padding: 0;*/
+}
+
+ul {
+  padding: 0 1rem 1.2rem;
+  list-style: square outside none;
+}
+
+article {
+  line-height: 26px;
+}
+
+article img {
+  width: 100%;
 }
 
 #container {
   max-width: var(--max-layout-width);
   margin: auto;
-}
-
-article img {
-  width: 100%;
+  padding: 1em;
 }
 
 .video-raw-wrapper {
@@ -109,11 +108,11 @@ article img {
 }
 
 .bold {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .em-note {
-  font-family: 'Rubik', sans-serif;
+  /*font-family: 'Rubik', sans-serif;*/
   font-style: italic;
   text-align: center;
   margin: 2em 0;
@@ -126,10 +125,20 @@ article img {
   padding: 0;
 }
 
-.main-menu > * {
-  font-family: 'Rubik', sans-serif;
-  margin-right: 1.5em;
+a.minimal {
+  color: inherit;
+  text-decoration: none;
 }
+
+a.minimal:hover {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+.main-menu > * {
+  margin-right: 1.2em;
+}
+
 .main-menu > *:last-child {
   margin-right: 0;
 }
@@ -146,15 +155,9 @@ article img {
   text-align: center;
 }*/
 
-.menu-item a:visited {
-  color: inherit;
-}
 
 .text-decoration-none {
   text-decoration: none;
-}
-.text-decoration-none:hover {
-  text-decoration: underline;
 }
 
 .zero-margin-padding {
@@ -164,16 +167,6 @@ article img {
 
 .list-style-none {
   list-style: none;
-}
-
-.works h1 {
-  margin: 0.5em 0 0 0;
-  padding: 0;
-}
-
-.works p {
-  padding: 0;
-  margin: 0.5em 0 2em 0;
 }
 
 .border-bottom {
@@ -201,18 +194,26 @@ article img {
 
 /* Home */
 .round-avatar {
-  width: 6em;
-  height: 6em;
-  border-radius: 3em;
+  width: 8em;
+  height: 8em;
+  border-radius: 4em;
   object-fit: cover;
+  filter: brightness(120%) hue-rotate(0deg);
+  /*filter: sepia(90%) saturate(100%) brightness(100%) hue-rotate(180deg);*/
 }
 
 canvas {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 100vh;
   /*border: 1px solid red;*/
   z-index: -1;
+}
+
+footer {
+  margin-top: 5em;
 }
 
 /*section {
@@ -237,7 +238,7 @@ canvas {
 #menuToggle
 {
   display: block;
-  position: relative;
+  /*position: relative;*/
   /*top: 50px;
   left: 50px;*/
 
@@ -297,7 +298,7 @@ canvas {
   transform-origin: 0% 100%;
 }
 
-/* 
+/*
  * Transform all the slices of hamburger
  * into a crossmark.
  */
@@ -308,18 +309,12 @@ canvas {
   background: #232323;
 }
 
-/*
- * But let's hide the middle one.
- */
 #menuToggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
   transform: rotate(-45deg) translate(0, -1px);
@@ -332,8 +327,11 @@ canvas {
 #menu
 {
   position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+
   padding: 50px;
   padding-top: 125px;
   

@@ -1,14 +1,14 @@
 {
-  "name": "casey-website",
+  "name": "caseyyee-website",
   "version": "1.0.0",
-  "description": "",
-  "main": "_site/index.html",
+  "description": "My piece of the interwebs",
+  "main": "docs/index.html",
   "scripts": {
-    "dev": "npx eleventy --serve",
-    "build": "npx eleventy",
+    "dev": "npx eleventy --input=src --output=docs --serve",
+    "build": "npx eleventy --input=src --output=docs",
     "start": "npm run dev"
   },
-  "author": "",
+  "author": "Casey Yee",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "github:11ty/eleventy",

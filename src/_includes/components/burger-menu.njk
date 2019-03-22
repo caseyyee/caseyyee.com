@@ -25,11 +25,11 @@ https://codepen.io/ibnalkhwarizmi/pen/EremLG
     but hey, it's pure CSS magic.
     -->
     <ul id="menu" class="centered">
-      <a class="text-decoration-none bold" href="/"><li>Casey Yee</li></a>
-      <a class="text-decoration-none" href="/work"><li>Work</li></a>
-      <a class="text-decoration-none" href="/posts"><li>Mentions</li></a>
-      <a class="text-decoration-none" href="/interests"><li>Interests</li></a>
-      <a class="text-decoration-none" href="/contact"><li>Contact</li></a>
+      <a class="minimal bold" href="/"><li>Casey Yee</li></a>
+      {% for nav in menu %}
+        <a class="minimal" href="{{ nav.link }}"><li>{{ nav.name }}</li></a>
+      {% endfor %}
+      <a class="minimal" href="mailto:caseyyee.ca@gmail.com"><li>👋 Say Hi!</li></a>
     </ul>
   </div>
 </nav>

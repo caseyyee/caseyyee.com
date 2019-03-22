@@ -194,8 +194,6 @@ article img {
   height: 8em;
   border-radius: 4em;
   object-fit: cover;
-  filter: brightness(120%) hue-rotate(0deg);
-  /*filter: sepia(90%) saturate(100%) brightness(100%) hue-rotate(180deg);*/
 }
 
 /* three.js */

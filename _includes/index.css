@@ -14,13 +14,9 @@ html {
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
-  /*line-height: 26px;*/
   padding: 0;
   margin: 0;
-  /*margin: auto;*/
   background: #F1F2F7;
-  /*color: black;*/
-  /*border: 1em solid yellow;*/
 }
 
 a {
@@ -33,6 +29,16 @@ a:visited {
 
 a:active {
   color: lightgray;
+}
+
+a.minimal {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.minimal:hover {
+  color: var(--link-color);
+  text-decoration: underline;
 }
 
 h1, h2 {
@@ -55,11 +61,11 @@ h3 {
   font-weight: 700;
 }
 
-ul, li {
+ul, ol {
+  padding: 0 1rem 1.2rem;
 }
 
 ul {
-  padding: 0 1rem 1.2rem;
   list-style: square outside none;
 }
 
@@ -125,16 +131,6 @@ article img {
   padding: 0;
 }
 
-a.minimal {
-  color: inherit;
-  text-decoration: none;
-}
-
-a.minimal:hover {
-  color: var(--link-color);
-  text-decoration: underline;
-}
-
 .main-menu > * {
   margin-right: 1.2em;
 }
@@ -146,15 +142,6 @@ a.minimal:hover {
 .flex-1 {
   flex: 1;
 }
-
-/*.main-menu > * {
-  flex: 1 1 80px;
-  text-transform: uppercase;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-}*/
-
 
 .text-decoration-none {
   text-decoration: none;
@@ -169,8 +156,17 @@ a.minimal:hover {
   list-style: none;
 }
 
-.border-bottom {
-  border-top: 1px solid #616161;
+/* works */
+.works h1 {
+  margin: 1.2rem;
+}
+
+.bordered {
+  border-top: 1px solid #9B9B9B;
+}
+
+.bordered:first-child {
+  border-top: none;
 }
 
 .interests {
@@ -202,34 +198,19 @@ a.minimal:hover {
   /*filter: sepia(90%) saturate(100%) brightness(100%) hue-rotate(180deg);*/
 }
 
+/* three.js */
 canvas {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  /*border: 1px solid red;*/
   z-index: -1;
 }
 
 footer {
   margin-top: 5em;
 }
-
-/*section {
-  margin-bottom: 5em;
-}*/
-
-/*.social-icons {
-  font-size: 1em;
-}
-.social-icons > * {
-  margin-right: 0.4rem;
-}
-.social-icons > *:last-child {
-  margin-right: 0;
-}*/
-
 
 .menu-burger {
   display: none;
@@ -238,63 +219,45 @@ footer {
 #menuToggle
 {
   display: block;
-  /*position: relative;*/
-  /*top: 50px;
-  left: 50px;*/
-
   z-index: 1;
-
   -webkit-user-select: none;
   user-select: none;
 }
 
-#menuToggle input
-{
+#menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
   position: absolute;
-  /*top: -7px;
-  left: -5px;*/
-  
   cursor: pointer;
-  
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
-  
   -webkit-touch-callout: none;
 }
 
 /*
  * Just a quick hamburger
  */
-#menuToggle span
-{
+#menuToggle span {
   display: block;
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-
   background: #000000;
   border-radius: 3px;
-  
   z-index: 1;
-  
   transform-origin: 4px 0px;
-  
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
+#menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
+#menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
@@ -302,21 +265,18 @@ footer {
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-#menuToggle input:checked ~ span
-{
+#menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
 
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
+#menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
+#menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
@@ -331,18 +291,13 @@ footer {
   height: 100vh;
   top: 0;
   left: 0;
-
   padding: 50px;
   padding-top: 125px;
-  
   background: #ededed;
   list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
+  -webkit-font-smoothing: antialiased;/* to stop flickering of text in safari */
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-  
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
@@ -355,8 +310,7 @@ footer {
 /*
  * And let's slide it in from the left
  */
-#menuToggle input:checked ~ ul
-{
+#menuToggle input:checked ~ ul{
   transform: none;
 }
 

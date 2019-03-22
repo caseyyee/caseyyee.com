@@ -1,18 +1,18 @@
 [{
   "name": "Firefox Reality VR Browser",
-  "description": "Explorations of the Web in VR",
+  "description": "Virtual Realit Web Browser for mobile VR headsets",
   "link": "/projects/firefox-reality"
 },{
   "name": "WebVR Content Tools",
-  "description": "Content creation tooling for WebVR",
+  "description": "Content creation and prototyping tools for WebVR",
   "link": "/projects/webvr-tools"
 },{
   "name": "Firefox OS",
-  "description": "Mobile Phone OS made with Browser technologies",
+  "description": "Open-source mobile phone OS made entirely with web technologies",
   "link": "/projects/firefox-os"
 },{
-  "name": "Nike Air Jordan 12",
-  "description": "Site for Icon Air Jordan 2012 sneakers",
+  "name": "Air Jordan 12",
+  "description": "Website for icon Air Jordan sneakers",
   "link": "/projects/aj2012"
 },{
   "name": "LIDO by BOSA",
@@ -20,6 +20,6 @@
   "link": "/projects/lido"
 },{
   "name": "VFS Digital Design",
-  "description": "Web development program and website",
+  "description": "UX, Web and Physical computing programs at Vancouver Film School",
   "link": "/projects/vfs"
 }]

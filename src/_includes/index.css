@@ -162,7 +162,7 @@ article img {
 }
 
 .works p {
-  margin: 0 0 1.2rem 0;
+  margin: 0.5em 0 1.5rem 0;
 }
 
 .bordered {
@@ -321,8 +321,17 @@ footer {
 /* media */
 @media (max-width: 760px) {
   h1 {
-    font-size: 2em;
+    font-size: 1.8em;
     margin: 0.4em 0;
+  }
+  h2 {
+    font-size: 1.3em;
+    line-height: 1.2em;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 1.1em;
   }
 }
 

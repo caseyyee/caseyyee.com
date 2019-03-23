@@ -49,13 +49,6 @@ Advantages of WebGL, non prescriptive and totally left to the content creator ho
 
 * [Github CSS-VR Examples](https://github.com/caseyyee/experiment-cssvr)
 
-
-## <a name="aframe"></a>A-Frame
-
-<img src="{{ "/img/aframe.gif" | url }}">
-
-The design intent of A-Frame was to re-create the simplicity of content creation of the early web using simple HTML markup. This project was built on top of three.js and uses custom-element web components to provide a very easy-to-use and understand interface for creating VR content requiring no additional code.
-
 ## <a name="unity-webvr-assets"></a>🕹 Unity WebVR Assets
 
 <img src="{{ "/img/unity-assets.gif" | url }}">
@@ -68,6 +61,13 @@ Project Links
 * [Github Project](https://github.com/mozilla/unity-webvr-export)
 * [Mozilla Hacks Post](https://hacks.mozilla.org/2018/02/create-vr-on-the-web-using-unity3d)
 
+## <a name="aframe"></a>A-Frame
+
+<img src="{{ "/img/aframe.gif" | url }}">
+
+<img src="{{ "/img/aframe/markup.png" | url }}">
+
+The main design goal of A-Frame was to create a simple, and easy to use library that would allow anyone to create WebVR content with just simple HTML markup. The library was built on top of three.js and uses custom-element web components.
 
 ## <a name="aframe-ui-widgets"></a>🎚🎛 A-Frame UI widgets
 

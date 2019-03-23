@@ -158,25 +158,30 @@ article img {
 
 /* works */
 .works h1 {
-  margin: 1.2rem;
+  margin: 1.2rem 0 0 0;
+}
+
+.works p {
+  margin: 0 0 1.2rem 0;
 }
 
 .bordered {
-  border-top: 1px solid #9B9B9B;
+  border-bottom: 1px solid #9B9B9B;
 }
 
-.bordered:first-child {
+/*.bordered:first-child {
   border-top: none;
-}
+}*/
 
 .interests {
   display: flex;
   flex-wrap: wrap;
+  /*justify-content: flex-start;*/
 }
 
 .interest {
-  min-width: 250px;
-  flex: 1;
+  width: 250px;
+  /*flex: 1;*/
 }
 
 .project-summary {
@@ -207,7 +212,7 @@ canvas {
 }
 
 footer {
-  margin-top: 5em;
+  margin-top: 3em;
 }
 
 .menu-burger {

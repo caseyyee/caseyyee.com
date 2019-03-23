@@ -3,33 +3,41 @@ layout: base.njk
 title: Casey Yee - Resume
 ---
 
+
 # Casey Yee
 
-*Strong technical knowledge and design expertise.  Looking for world-changing opportunities.*
-
-I'm located in Vancouver, BC.
-
-Email caseyyee.ca@gmail.com or call at 778 883 8800
+www.caseyyee.com / caseyyee.ca@gmail.com / 778 883 8800 /
 
 [Download PDF resume](https://gitprint.com/caseyyee/resume/master/README.md)
 
 
 ## Expertise
 
-* Product design and strategy.
-* User experience and visual design.
-* Technology analysis, design and development.
+* Product design and strategy
+* User experience design
+* Technology analysis, design and development
+* Developer advocacy
 * Full-stack web development
 
 ## Experience
 
-### Virtual Reality Research & Design
+### Virtual and Augmented Reality Research & Design
 
 **Mozilla Corporation**
 
-*September 2014 - Present, Vancouver BC*
+*September 2014 - 2019, Remote, Vancouver BC*
 
-I work on the Mozilla VR team where we research, design and develop VR products for the open web.
+I work on the Mozilla Mixed Reality team where where I research, design, develop VR and AR products, tools, technology for the open web. Along the way, i've also been a developer advocate, worked with various partners and taken key roles in the development of the program.
+
+- Mozilla Reality VR web browser
+- A-Frame content creation tools
+- Unity game-engine assets for WebVR
+- Worked with W3C community group
+- Helped form WebVR API's
+- Prototyped several browers and experiences
+
+- [More about Firefox Reality](http://caseyyee.com/projects/firefox-reality/)
+- [More about VR content tools](http://caseyyee.com/projects/webvr-tools/)
 
 ### Senior UX Design Engineer
 
@@ -42,6 +50,7 @@ Firefox OS is a open-source smartphone operating system built entirely using web
 - Worked with product stakeholders and partners on requirements and specifications.
 - Designed and prototyped style-guides, user interactions and various application and system components.
 - Worked with engineers to implement design and features.
+- More about [Firefox OS](http://caseyyee.com/projects/firefox-os/)
 
 ### Senior Front-End Engineer
 
@@ -55,6 +64,10 @@ Working collaboratively with the design team on connecting of ideas with the tec
 - Researching and prototyping various designs and interactions.
 - Directing front-end development engineering team and working with back-end engineers to integrate work.
 - Working with Release Engineering and Quality Assurance teams on deploying applications and  create test and defect tracking plans.
+
+A major achievement during my time at Blast Radius was creating the Nike Air Jordan 2012 website. The site picked up numerous awards and pioneered new techniques in responsive, animation and web performance never before seen at the time.
+
+- More about [Air Jordan 2012](http://caseyyee.com/projects/aj2012/)
 
 ### Senior Instructor, Digital Design
 
@@ -70,6 +83,7 @@ Some of my key contributions to the program include:
 - Tangible Interfaces and physical computing using Arduino
 - Interactive design and Interface design at VFS Foundation
 - Designed and programmed the Digital Design blog “OOMPH”
+- [See more about VFS](http://caseyyee.com/projects/vfs/)
 
 ### Co-Founder
 
@@ -133,3 +147,4 @@ Website development for various publicly traded companies.
 
 - Design and program web sites to suite client needs.
 - Plan, design and develop a investment research portal that would later become our focus, Stockhouse.com
+

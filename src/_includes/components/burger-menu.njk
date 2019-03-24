@@ -25,11 +25,18 @@ https://codepen.io/ibnalkhwarizmi/pen/EremLG
     but hey, it's pure CSS magic.
     -->
     <ul id="menu" class="centered">
-      <a class="minimal bold" href="/"><li>Casey Yee</li></a>
+      <li><a class="bordered" href="/">Casey Yee</a></li>
       {% for nav in menu %}
-        <a class="minimal" href="{{ nav.link }}"><li>{{ nav.name }}</li></a>
+        <li><a class="bordered" href="{{ nav.link }}">{{ nav.name }}</a></li>
       {% endfor %}
-      <a class="minimal" href="mailto:caseyyee.ca@gmail.com"><li>👋 Say Hi!</li></a>
+
+      <li>
+        <br/>
+        <p><a href="mailto:caseyyee.ca@gmail.com">Don't be shy 👋 Say Hi!</a></p>
+      </li>
+      <li>
+        {% include "components/social.njk" %}
+      </li>
     </ul>
   </div>
 </nav>

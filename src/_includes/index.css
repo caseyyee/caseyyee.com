@@ -1,5 +1,5 @@
 :root {
-  --max-layout-width: 800px;
+  --max-layout-width: 900px;
   --link-color: #007CCE;
 
   --vapor-pink: #FFE7F8;
@@ -194,17 +194,13 @@ article {
 
 /* works */
 #works {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#works > * {
-  min-width: 250px;
-  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 1fr;
 }
 
 .work-description {
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 }
 
 .work-description h3 {
@@ -213,19 +209,14 @@ article {
 
 #works img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
 }
 
 .interests {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.interest {
-  flex: 1;
-  min-width: 220px;
-  margin-right: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 0.5rem;
 }
 
 .project-summary {

@@ -95,7 +95,7 @@ article {
   line-height: 26px;
 }
 
-article img {
+.image-width-100 img {
   width: 100%;
 }
 
@@ -208,7 +208,9 @@ article img {
 }
 
 .interest {
-  width: 250px;
+  flex: 1;
+  min-width: 220px;
+  margin-right: 1rem;
 }
 
 .project-summary {

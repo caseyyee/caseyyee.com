@@ -1,25 +1,31 @@
 [{
   "name": "Firefox Reality VR Browser",
+  "image": "/img/fxr-content.png",
   "description": "Virtual Realit Web Browser for mobile VR headsets",
   "link": "/projects/firefox-reality"
 },{
   "name": "WebVR Content Tools",
+  "image": "/img/aframe-ui-widgets.gif",
   "description": "Content creation and prototyping tools for WebVR",
   "link": "/projects/webvr-tools"
 },{
   "name": "Firefox OS",
+  "image": "/img/fxos/fxos-3.jpg",
   "description": "Open-source mobile phone OS made entirely with web technologies",
   "link": "/projects/firefox-os"
 },{
   "name": "Air Jordan 12",
+  "image": "/img/aj2012/aj2012-1.jpg",
   "description": "Website for icon Air Jordan sneakers",
   "link": "/projects/aj2012"
 },{
   "name": "LIDO by BOSA",
+  "image": "/img/lido/LIDO4.jpg",
   "description": "State of the art real-estate sales center experience for BOSA properties.",
   "link": "/projects/lido"
 },{
   "name": "VFS Digital Design",
+  "image": "/img/vfs/oomph3.jpg",
   "description": "UX, Web and Physical computing programs at Vancouver Film School",
   "link": "/projects/vfs"
 }]

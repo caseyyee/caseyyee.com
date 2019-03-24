@@ -20,10 +20,18 @@ body {
 }
 
 a {
-  color: var(--link-color);
+  text-decoration: none;
+  /*color: var(--link-color);*/
+  color: inherit;
+  font-weight: bold;
 }
 
 a:visited {
+  /*color: var(--link-color);*/
+  color: #1F4A68;
+}
+
+a:hover {
   color: var(--link-color);
 }
 
@@ -38,7 +46,21 @@ a.minimal {
 
 a.minimal:hover {
   color: var(--link-color);
-  text-decoration: underline;
+  /*text-decoration: underline;*/
+}
+
+a.bordered {
+  display: inline-block;
+  color: #000;
+  border: 3px solid #000;
+  text-decoration: none;
+  padding: 0.2rem 0.8rem;
+  box-shadow: 5px 5px 0px #000;
+  margin: 0.8rem 0.5rem 0 0;
+}
+
+a.bordered:hover {
+  background: #fff;
 }
 
 h1, h2 {
@@ -157,7 +179,35 @@ article img {
 }
 
 /* works */
-.works h1 {
+#works {
+  display: flex;
+  flex-wrap: wrap;
+}
+#works > * {
+  /*border: 1px solid red;*/
+  min-width: 250px;
+  flex: 1;
+}
+
+/*.work-tile:hover {
+  background: white;
+}*/
+
+.work-description {
+  padding: 0 1rem;
+}
+
+.work-description h3 {
+  margin: 0;
+}
+
+#works img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/*.works h1 {
   margin: 1.2rem 0 0 0;
 }
 
@@ -168,10 +218,7 @@ article img {
 .bordered {
   border-bottom: 1px solid #9B9B9B;
 }
-
-/*.bordered:first-child {
-  border-top: none;
-}*/
+*/
 
 .interests {
   display: flex;

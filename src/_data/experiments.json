@@ -1,0 +1,21 @@
+[{
+  "name": "canvas-sketch",
+  "image": "/img/experiments/canvas-sketch.png",
+  "description": "three.js sketches",
+  "link": "https://github.com/caseyyee/sketches"
+},{
+  "name": "Unity Playroom",
+  "image": "/img/experiments/unity-playroom.gif",
+  "description": "Unity games on a bigscreen in WebVR",
+  "link": "https://github.com/caseyyee/unity-webvr-playroom"
+},{
+  "name": "WebVR Fireworks",
+  "image": "/img/experiments/fireworks.gif",
+  "description": "New Year Fireworks experiment in WebVR",
+  "link": "https://github.com/caseyyee/webvr-fireworks"
+},{
+  "name": "3D",
+  "image": "/img/3d/blender2.png",
+  "description": "3D modeling, rendering and lighting",
+  "link": "/projects/3d"
+}]

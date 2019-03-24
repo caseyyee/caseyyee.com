@@ -1,8 +1,11 @@
-<ul class="zero-margin-padding works">
+<ul class="zero-margin-padding" id="works">
 {% for work in works %}
-  <li class="list-style-none bordered centered">
-    <h1><a class="minimal" href="{{ work.link }}">{{ work.name }}</a></h1>
-    <p>{{ work.description }}</p>
+  <li class="list-style-none work-tile">
+    <a href="{{ work.link }}"><img src="{{ work.image }}"></a>
+    <div class="work-description">
+      <h3><a class="bordered" href="{{ work.link }}">{{ work.name }}</a></h3>
+      <p>{{ work.description }}</p>
+    </div>
   </li>
 {% endfor %}
 </ul>

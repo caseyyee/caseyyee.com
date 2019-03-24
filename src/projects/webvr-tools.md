@@ -11,13 +11,21 @@ The content ecosystem of VR at this early stage, is predominatly games. A lot of
 
 We've tried many things along the way, but here is a sampling of some of successes and attempts that I was part of.
 
-* [WebVR Javascript API](#webvr-browser-api)
+<h3>
+  <a class="bordered" href="#webvr-api">WebVR Browser API</a>
+  <a class="bordered" href="#unity-webvr-assets">Unity WebVR Assets</a>
+  <a class="bordered" href="#unity-webvr-assets">A-Frame</a>
+  <a class="bordered" href="#unity-webvr-assets">UI Widgets</a>
+  <a class="bordered" href="#unity-webvr-assets">Sketch2three</a>
+</h3>
+
+<!-- * [WebVR Javascript API](#webvr-browser-api)
 * [Unity-WebVR-Assets](#unity-webvr-assets)
 * [A-Frame](#aframe)
 * [A-Frame UI Widgets](#aframe-ui-widgets)
-* [Sketch2three](#sketch2three)
+* [Sketch2three](#sketch2three) -->
 
-## <a name="webvr-browser-api"></a>WebVR Browser API
+## <a name="webvr-api"></a>WebVR Browser API
 
 <div class="video-wrapper">
   <iframe src="https://www.youtube-nocookie.com/embed/Le8pTXQqM3s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

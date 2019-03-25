@@ -1,7 +1,8 @@
 ---
 layout: post.njk
-title: Casey Yee
----  
+title: Casey Yee - LIDO by Bosa
+---
+
 # LIDO Presentation Center
 
 ## by BOSA Properties

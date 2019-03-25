@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Casey Yee - Podcasts, Articles, Interviews and Mentions
+title: Casey Yee - Mentions
 ---
 
 ## Podcast

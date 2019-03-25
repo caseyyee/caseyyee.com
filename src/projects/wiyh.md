@@ -1,6 +1,6 @@
 ---
 layout: post.njk
-title: Casey Yee
+title: Casey Yee - Word In Your Hand
 ---
 
 # Word In Your Hand

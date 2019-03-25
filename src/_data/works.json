@@ -1,7 +1,7 @@
 [{
   "name": "Firefox Reality VR Browser",
   "image": "/img/fxr-content.png",
-  "description": "Virtual Realit Web Browser for mobile VR headsets.",
+  "description": "Web Browser for mobile VR headsets.",
   "link": "/projects/firefox-reality"
 },{
   "name": "WebVR Content Tools",

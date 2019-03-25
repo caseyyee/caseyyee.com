@@ -12,9 +12,9 @@ gulp.task('js', function() {
     .pipe(order([
       'src/js/perlin.js',
       'src/js/three.min.js',
-      'src/js/script.js'
+      'src/js/webgl.js'
     ], { base: __dirname }))
-    .pipe(concat('script.js'))
+    .pipe(concat('webgl.js'))
     .pipe(uglify())
     .pipe(gulp.dest('src/_includes/js'));
 });

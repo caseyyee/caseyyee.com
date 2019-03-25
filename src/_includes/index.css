@@ -320,6 +320,10 @@ canvas {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
+body[data-menu-open="true"] {
+  overflow: hidden;
+}
+
 /*
  * Make this absolute positioned
  * at the top left of the screen

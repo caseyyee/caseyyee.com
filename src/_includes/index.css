@@ -2,6 +2,7 @@
   --max-layout-width: 900px;
   --link-color: #007CCE;
 
+  /* pallete adapted from https://www.color-hex.com/color-palette/10221 */
   --vapor-pink: #FFE7F8;
   --vapor-cyan: #D9F7FE;
   --vapor-mint: #DFFFF4;
@@ -40,6 +41,7 @@ body {
   padding: 0;
   margin: 0;
   background: #F1F2F7;
+  -webkit-text-size-adjust: 100%;
 }
 
 a {

@@ -24,31 +24,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Casey Yee - WebVR Content Tools</title>
-
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" crossorigin="anonymous">
-
-  <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:700|Roboto" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet"> -->
-
-  <!-- <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Karla|Rubik" rel="stylesheet"> -->
+  <title>Casey Yee - WebVR Tools</title>
 
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
-  <style>:root{--max-layout-width:900px;--link-color:#007CCE;--vapor-pink:#FFE7F8;--vapor-cyan:#D9F7FE;--vapor-mint:#DFFFF4;--vapor-purple:#EFDDFF;--vapor-yellow:#FFFECD}.background-vapor-pink{background-color:var(--vapor-pink)}.background-vapor-cyan{background-color:var(--vapor-cyan)}.background-vapor-mint{background-color:var(--vapor-mint)}.background-vapor-purple{background-color:var(--vapor-purple)}.background-vapor-yellow{background-color:var(--vapor-yellow)}html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}body{font-family:'Source Sans Pro',sans-serif;font-size:18px;padding:0;margin:0;background:#f1f2f7}a{text-decoration:none;color:inherit;font-weight:700}a:visited{color:#1f4a68}a:hover{color:var(--link-color)}a:active{color:#d3d3d3}a.minimal{color:inherit}a.minimal:hover{color:var(--link-color)}a.bordered{display:inline-block;color:#000;border:3px solid #000;text-decoration:none;padding:.2rem .8rem;box-shadow:5px 5px 0 #000;margin:.8rem .5rem 0 0}a.bordered:hover{background:#fff}h1{font-size:2.5em;line-height:1.2em;font-weight:400}h2{font-size:1.7em;line-height:1.2em;font-weight:700}h3{font-size:1.2em;font-weight:700}ol,ul{padding:0 1rem 1.2rem}ul{list-style:square outside none}article{line-height:26px}#container{max-width:var(--max-layout-width);margin:auto;padding:1em}.image-width-100 img{width:100%}.centered{text-align:center}.right{text-align:right}.bold{font-weight:600}.flex-1{flex:1}.video-raw-wrapper{width:100%}.video-raw{width:100%}.video-wrapper{position:relative;padding-bottom:56.25%;height:0}.video-wrapper iframe{position:absolute;width:100%;height:100%}.main-menu{display:flex;flex-wrap:wrap;margin:0 0 2em;padding:0}.main-menu>*{margin-right:1.2em}.main-menu>:last-child{margin-right:0}.text-decoration-none{text-decoration:none}.zero-margin-padding{margin:0;padding:0}.list-style-none{list-style:none}#works{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));grid-auto-rows:1fr}.work-description{padding:0 .5rem}.work-description h3{margin:0}#works img{width:100%;height:200px;object-fit:cover}.interests{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));grid-gap:.5rem}.project-summary{display:flex;flex-wrap:wrap}.project-summary>*{flex:1 1 150px}.round-avatar{width:8em;height:8em;border-radius:4em;object-fit:cover}canvas{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1}footer{margin-top:2em}.menu-burger{display:none}#menuToggle{display:block;z-index:1;-webkit-user-select:none;user-select:none}#menuToggle input{display:block;width:40px;height:32px;position:absolute;cursor:pointer;opacity:0;z-index:2;-webkit-touch-callout:none}#menuToggle span{display:block;width:33px;height:4px;margin-bottom:5px;position:relative;background:#000;border-radius:3px;z-index:1;transform-origin:4px 0;transition:transform .5s cubic-bezier(.77,.2,.05,1),background .5s cubic-bezier(.77,.2,.05,1),opacity .55s ease}#menuToggle span:first-child{transform-origin:0 0}#menuToggle span:nth-last-child(2){transform-origin:0 100%}#menuToggle input:checked~span{opacity:1;transform:rotate(45deg) translate(-2px,-1px);background:#232323}#menuToggle input:checked~span:nth-last-child(3){opacity:0;transform:rotate(0) scale(.2,.2)}#menuToggle input:checked~span:nth-last-child(2){transform:rotate(-45deg) translate(0,-1px)}#menu{position:absolute;width:100vw;height:100vh;top:0;left:0;padding:50px;padding-top:125px;background:var(--vapor-cyan);list-style-type:none;-webkit-font-smoothing:antialiased;transform-origin:0 0;transform:translate(-100%,0);transition:transform .5s cubic-bezier(.77,.2,.05,1)}#menuToggle input:checked~ul{transform:none}@media (max-width:760px){h1{font-size:1.8em;margin:.4em 0}h2{font-size:1.3em;line-height:1.2em;font-weight:700}h3{font-size:1.1em}}@media (max-width:540px){.menu-secondary{display:none}.menu-burger{display:block}}</style>
-
+  <style>:root{--max-layout-width:900px;--link-color:#007CCE;--vapor-pink:#FFE7F8;--vapor-cyan:#D9F7FE;--vapor-mint:#DFFFF4;--vapor-purple:#EFDDFF;--vapor-yellow:#FFFECD}.background-vapor-pink{background-color:var(--vapor-pink)}.background-vapor-cyan{background-color:var(--vapor-cyan)}.background-vapor-mint{background-color:var(--vapor-mint)}.background-vapor-purple{background-color:var(--vapor-purple)}.background-vapor-yellow{background-color:var(--vapor-yellow)}html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}body{font-family:'Source Sans Pro',sans-serif;font-size:18px;padding:0;margin:0;background:#f1f2f7;-webkit-text-size-adjust:100%}a{text-decoration:none;color:inherit;font-weight:700}a:visited{color:#1f4a68}a:hover{color:var(--link-color)}a:active{color:#d3d3d3}a.minimal{color:inherit}a.minimal:hover{color:var(--link-color)}a.bordered{display:inline-block;color:#000;border:3px solid #000;text-decoration:none;padding:.2rem .8rem;box-shadow:5px 5px 0 #000;margin:.8rem .5rem 0 0}a.bordered:hover{background:#fff}h1{font-size:2.5em;line-height:1.2em;font-weight:400}h2{font-size:1.7em;line-height:1.2em;font-weight:700}h3{font-size:1.2em;font-weight:700}ol,ul{padding:0 1rem 1.2rem}ul{list-style:square outside none}article{line-height:26px}#container{max-width:var(--max-layout-width);margin:auto;padding:1em}.image-width-100 img{width:100%}.centered{text-align:center}.right{text-align:right}.bold{font-weight:600}.flex-1{flex:1}.video-raw-wrapper{width:100%}.video-raw{width:100%}.video-wrapper{position:relative;padding-bottom:56.25%;height:0}.video-wrapper iframe{position:absolute;width:100%;height:100%}.main-menu{display:flex;flex-wrap:wrap;margin:0 0 2em;padding:0}.main-menu>*{margin-right:1.2em}.main-menu>:last-child{margin-right:0}.text-decoration-none{text-decoration:none}.zero-margin-padding{margin:0;padding:0}.list-style-none{list-style:none}#works{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));grid-auto-rows:1fr}.work-description{padding:0 .5rem}.work-description h3{margin:0}#works img{width:100%;height:200px;object-fit:cover}.interests{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));grid-gap:.5rem}.project-summary{display:flex;flex-wrap:wrap}.project-summary>*{flex:1 1 150px}.round-avatar{width:8em;height:8em;border-radius:4em;object-fit:cover}canvas{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1}footer{margin-top:2em}.menu-burger{display:none}#menuToggle{display:block;z-index:1;-webkit-user-select:none;user-select:none}#menuToggle input{display:block;width:40px;height:32px;position:absolute;cursor:pointer;opacity:0;z-index:2;-webkit-touch-callout:none}#menuToggle span{display:block;width:33px;height:4px;margin-bottom:5px;position:relative;background:#000;border-radius:3px;z-index:1;transform-origin:4px 0;transition:transform .5s cubic-bezier(.77,.2,.05,1),background .5s cubic-bezier(.77,.2,.05,1),opacity .55s ease}#menuToggle span:first-child{transform-origin:0 0}#menuToggle span:nth-last-child(2){transform-origin:0 100%}#menuToggle input:checked~span{opacity:1;transform:rotate(45deg) translate(-2px,-1px);background:#232323}#menuToggle input:checked~span:nth-last-child(3){opacity:0;transform:rotate(0) scale(.2,.2)}#menuToggle input:checked~span:nth-last-child(2){transform:rotate(-45deg) translate(0,-1px)}#menu{position:absolute;width:100vw;height:100vh;top:0;left:0;padding:50px;padding-top:125px;background:var(--vapor-cyan);list-style-type:none;-webkit-font-smoothing:antialiased;transform-origin:0 0;transform:translate(-100%,0);transition:transform .5s cubic-bezier(.77,.2,.05,1)}#menuToggle input:checked~ul{transform:none}@media (max-width:760px){h1{font-size:1.8em;margin:.4em 0}h2{font-size:1.3em;line-height:1.2em;font-weight:700}h3{font-size:1.1em}}@media (max-width:540px){.menu-secondary{display:none}.menu-burger{display:block}}</style>
 
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary"/>
-  <meta name="twitter:site" content="www.caseyyee.com"/>
-  <meta name="twitter:title" content="Casey Yee - WebVR Content Tools"/>
+  <meta name="twitter:site" content="caseyyee.com"/>
+  <meta name="twitter:title" content="Casey Yee - WebVR Tools"/>
   <meta name="twitter:creator" content="@whoyee" />
   <meta name="twitter:description" content=""/>
-  <meta name="twitter:image" content="https://mysite.com/images/profile-image.png"/>
+  <meta name="twitter:image" content="https://caseyyee.com/img/casey.jpg"/>
 
-  <!-- todo add GA -->
-  <!-- todo add FB -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136874409-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-136874409-1');
+  </script>
 </head>
 
 <body>
@@ -97,6 +94,7 @@ https://codepen.io/ibnalkhwarizmi/pen/EremLG
         <p><a href="mailto:caseyyee.ca@gmail.com">Don't be shy 👋 Say Hi!</a></p>
       </li>
       <li>
+        <br/>
         🐦 <a href="https://twitter.com/whoyee">Twitter</a>&nbsp; 
 🔨 <a href="http://github.com/caseyyee">Github</a>&nbsp; 
 ⛓ <a href="https://www.linkedin.com/in/whoyee/">LinkedIn</a>&nbsp; 
@@ -120,70 +118,72 @@ https://codepen.io/ibnalkhwarizmi/pen/EremLG
     
 <article class="image-width-100">
   <h1>WebVR Content Tools</h1>
-<h2>The mission was to build tools and experiences that would lead the way for creators to hop-in and experiment with WebVR.</h2>
-<p>The content ecosystem of VR at this early stage, is predominatly games. A lot of this has a lot to do with the fact that many of the skills, processes and technology is particularly well suited to developing VR content. Early on at Mozilla, we recognized that there are many potential applications beyond just games, and if we could enable designers and developers to use their existing web skills to create content, we could potentially bring along the content, communities and web technologies that make the Web so exciting into VR.</p>
-<p>We've tried many things along the way, but here is a sampling of some of successes and attempts that I was part of.</p>
+<p>The challenge for WebVR, is to get people creating content.
+To solve this, I helped create a number of tools and experiences that helped kickstart interest in creating WebVR content. We also used these tools for our own explorations and prototyping.</p>
 <h3>
   <a class="bordered" href="#webvr-api">WebVR Browser API</a>
   <a class="bordered" href="#unity-webvr-assets">Unity WebVR Assets</a>
-  <a class="bordered" href="#unity-webvr-assets">A-Frame</a>
-  <a class="bordered" href="#unity-webvr-assets">UI Widgets</a>
-  <a class="bordered" href="#unity-webvr-assets">Sketch2three</a>
+  <a class="bordered" href="#aframe">A-Frame</a><br/>
+  <a class="bordered" href="#aframe-ui-widgets">UI Widgets</a>
+  <a class="bordered" href="#puzzle-rain">Puzzle Rain</a>
+  <a class="bordered" href="#sketch2three">Sketch2three</a>
 </h3>
-<!-- * [WebVR Javascript API](#webvr-browser-api)
-* [Unity-WebVR-Assets](#unity-webvr-assets)
-* [A-Frame](#aframe)
-* [A-Frame UI Widgets](#aframe-ui-widgets)
-* [Sketch2three](#sketch2three) -->
-<h2><a name="webvr-api"></a>WebVR Browser API</h2>
-<div class="video-wrapper">
-  <iframe src="https://www.youtube-nocookie.com/embed/Le8pTXQqM3s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<p>We investigated two different approaches that we looked at for rendering web content into VR.  WebGL, the API that allows for rendering of 3D content into the browser, and HTML and CSS, extending on the CSS transform capabilities that were already in place.  Both have their merits (which at some point in the future I intend to write about), but we ultimately designed around what was most practical at the time, and that was WebGL. The implementation includes the ability to acquire VR headset and controller data that content needs to render a appropriate view into the headset using Javascript in the browser.</p>
-<p>The WebVR API was first implemented into the Firefox desktop browser with the Oculus VR headset. In this video, we demonstrate WebVR enabled content rendering into a VR headset.</p>
-<p>(Enter VR flow)
-(CSS-VR capture, code)</p>
-<ul>
-<li><a href="https://github.com/immersive-web/webxr/">WebXR specification to succeed WebVR API</a>.</li>
-<li><a href="https://hacks.mozilla.org/2016/12/w3c-workshop-on-web-and-virtual-reality-a-look-ahead/">W3C Workshop on Web and Virtual Reality: A Look Ahead</a></li>
-<li><a href="https://hacks.mozilla.org/2016/03/introducing-the-webvr-1-0-api-proposal/">WebVR API Proposal</a></li>
-</ul>
-<h3>Two very different approaches</h3>
-<p><img src="/img/css-vr.png" alt="Early CSS-VR experiments showing DIV's rendering into Oculus Rift headset">
-<em>Early CSS-VR experiments showing DIV's rendering into Oculus Rift headset</em></p>
-<p>Encouraged by incredible work like <a href="http://tridiv.com/">Tridiv</a> and <a href="https://keithclark.co.uk/labs/css-fps/">CSS FPS by Keith Clark</a>, it seemed that CSS might possible be capable of being a useabe engine for VR rendering.</p>
-<p>CSS VR and WebGL options. CSS-VR ultimately ended up being to complex. VR capabilities were a moving target and the complexity of the CSS rendering engine proved to be a obstacle.</p>
-<p>Advantages of CSS included delclarative nature, rendering and provided basic interaction within the browser.</p>
-<p>Advantages of WebGL, non prescriptive and totally left to the content creator how to create, render and interact with the scene.</p>
-<ul>
-<li><a href="https://github.com/caseyyee/experiment-cssvr">Github CSS-VR Examples</a></li>
-</ul>
+<br/>
 <h2><a name="unity-webvr-assets"></a>🕹 Unity WebVR Assets</h2>
 <img src="/img/unity-assets.gif">
-<p>A significant portion of VR content creators use Unity, a leading game content creation tool. With the emergence of browser technology like <a href="">Web Assembly</a>, it was now possible to run high performance native applications and games within the Web browser environment. Because content runs in the browser, it also means content has access to all the web browser API's, including WebVR. The WebVR-Assets were built to make it easy for Unity VR developers to create applications using Unity, but also make it possible to be shared and available on the Web as part of the same code base.</p>
-<p>Project Links</p>
+<p>The Unity-WebVR-Assets were built to make it easy for VR content creators using Unity, a popular game development platform, to export their experiences for use in WebVR. The goal was to have content, which was available on native, brought over to help make more WebVR content available.</p>
 <ul>
 <li><a href="https://assetstore.unity.com/packages/templates/systems/webvr-assets-109152">Unity Asset Store</a></li>
 <li><a href="https://github.com/mozilla/unity-webvr-export">Github Project</a></li>
 <li><a href="https://hacks.mozilla.org/2018/02/create-vr-on-the-web-using-unity3d">Mozilla Hacks Post</a></li>
 </ul>
 <h2><a name="aframe"></a>A-Frame</h2>
-<img src="/img/aframe.gif">
+<img src="/img/aframe/aframe.gif">
 <img src="/img/aframe/markup.png">
 <p>The main design goal of A-Frame was to create a simple, and easy to use library that would allow anyone to create WebVR content with just simple HTML markup. The library was built on top of three.js and uses custom-element web components.</p>
+<ul>
+<li><a href="https://aframe.io">A-Frame website</a></li>
+<li><a href="../posts">See mentions</a></li>
+</ul>
 <h2><a name="aframe-ui-widgets"></a>🎚🎛 A-Frame UI widgets</h2>
 <img src="/img/aframe-ui-widgets.gif">
-<p>One of the most challenging areas of VR is designing interactions that are easy to understand and use. I built the UI widget A-Frame components to provide a starting set of controls that modeled physical controls that one would be familiar with using in the real-world. There was a few adjustments made to accomodate the challenges of VR, but users found this to be natural and intuitive and required very little learning to use.</p>
-<p>Project Links</p>
+<p>One of the most challenging areas of VR is designing interactions that are easy to understand and use. I built the UI widget A-Frame components to provide a starting set of controls that modeled physical controls that one would be familiar with using in the real-world.</p>
 <ul>
-<li><a href="https://github.com/caseyyee/aframe-ui-widgets/">Github</a></li>
+<li><a href="https://github.com/caseyyee/aframe-ui-widgets/">Github Project</a></li>
+</ul>
+<h2><a name="webvr-api"></a>WebVR Browser API</h2>
+<div class="video-wrapper">
+  <iframe src="https://www.youtube-nocookie.com/embed/Le8pTXQqM3s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p>The WebVR browser API makes it possible for web content to access VR headset and controller orientation and position data, which is then used to render the appropriate stereoscopic views using WebGL into the VR headset. I helped with the early design and testing in its earliest stages with <a href="https://twitter.com/kearwoodgilbert">Kearwood &quot;Kip&quot; Gilbert</a>, <a href="https://twitter.com/cvanw">Chris Wiemeersch</a> and <a href="https://twitter.com/kear">Brandon Jones</a> (Google).</p>
+<h3>Early CSS-VR explorations</h3>
+<p><img src="/img/content-tools/css-vr.png" alt="Early CSS-VR experiments showing DIV's rendering into Oculus Rift headset">
+<em>Early CSS-VR experiments showing DIV's rendering into Oculus Rift headset</em></p>
+<p>Encouraged by incredible work like <a href="http://tridiv.com/">Tridiv</a> and <a href="https://keithclark.co.uk/labs/css-fps/">CSS FPS by Keith Clark</a>, we experimented with using CSS as a way to render WebVR content.</p>
+<p>The <a href="firefox-reality">Horizon web browser</a> interface was built exclusively from CSS-VR.</p>
+<ul>
+<li><a href="https://github.com/caseyyee/experiment-cssvr">Github CSS-VR Examples</a></li>
+</ul>
+<h3>Additional information</h3>
+<ul>
+<li><a href="https://github.com/immersive-web/webxr/">WebXR specification to succeed WebVR API</a>.</li>
+<li><a href="https://hacks.mozilla.org/2016/12/w3c-workshop-on-web-and-virtual-reality-a-look-ahead/">W3C Workshop on Web and Virtual Reality: A Look Ahead</a></li>
+<li><a href="https://hacks.mozilla.org/2016/03/introducing-the-webvr-1-0-api-proposal/">Introducing the WebVR 1.0 API Proposal</a></li>
+</ul>
+<h2><a name="puzzle-rain"></a>Puzzle Rain Experience</h2>
+<img src="/img/content-tools/puzzle-rain.jpg">
+<p>Puzzle Rain is a musical journey in which you help awaken and guide mythical creatures back together into happy musical harmony with one another. Only their combined musical chorus can summon life-giving rain to revive the parched and desolate landscape. Though, there isn’t much time. Dangerous predators roam!</p>
+<p>The experience was a collaboration between <a href="http://unboring.net/">Arturo Paracuellos</a> and Mozilla.</p>
+<ul>
+<li><a href="https://blog.mozvr.com/puzzle-rain/">Puzzle Rain Blog Post</a></li>
+<li><a href="https://github.com/mozvr/puzzle-rain">Github Project</a></li>
 </ul>
 <h2><a name="sketch2three"></a>Sketch2three</h2>
 <img src="/img/sketch2three.gif">
-<p>One of the earliest challenges facing us when creating UI in VR was that lack of any way to create content layouts in VR.  To solve this, we created several workflow tools that would enable quick iteration of designs in HTML and design tools like Sketch, and export that content into a editable form in the web browser. This lead to extremely quick results that we could view in VR that allowed us to quickly iterate over several designs. The tool was used to build <a href="">HIRO</a>, <a href="">Horizon</a> and other incarnation of VR web browser concepts.</p>
-<p>Project links</p>
+<p>One of the earliest challenges facing us when creating UI, was that lack of  VR layout tools.  To solve this, I created a workflow tool that would enable quick iteration of designs in Sketch, viewable and editable within the browser, in WebVR.</p>
+<p>This lead to extremely quick results allowed us to quickly iterate over several designs. The tool was used to create <a href="">HIRO</a>, <a href="">Horizon</a> and other incarnation of VR web browser concepts.</p>
 <ul>
-<li><a href="https://github.com/caseyyee/aframe-ui-widgets/">Github</a></li>
+<li><a href="https://github.com/caseyyee/aframe-ui-widgets/">Github Project</a></li>
 </ul>
 
 </article>

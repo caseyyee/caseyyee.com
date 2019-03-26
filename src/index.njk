@@ -5,18 +5,24 @@ description: 🤘Click it! ...if you want learn a little more about me 👀.
 ---
 <p class="centered"><img class="round-avatar" src="{{ "/img/casey.jpg" | url }}"></p>
 
-<h1><strong>Hello! I'm Casey.</strong><br/>
+<h1>Hello! I'm Casey.<br/>
 I solve problems with Design & Code. <br/>
 I also love a good product.</h1>
 
 <h2>On the lookout for creative partners who are as excited 
 about the future and what's possible as I am.</h2>
 
-<h3><a href="/work" class="bordered background-vapor-mint">👀 Checkout my projects</a></h3>
+<p><em>Here's a sampling of work</em></p>
 
-<p class="margin-top-2 bold">I do product design, UX and full-stack code for cool new things like AR/VR, AI, IOT, Voice and much more.</p>
+{% include "components/works.njk" %}
+
+<h2>Fun smaller projects, experiments and explorations</h2>
+
+{% include "components/experiments.njk" %}
+
+<!-- <p class="margin-top-2 bold">I do product design, UX and full-stack code for cool new things like AR/VR, AI, IOT, Voice and much more.</p> -->
 
 <p>🤘 <a href="https://github.com/caseyyee/resume/blob/master/README.md">See full resume</a></p>
 
 <!-- WebGL background -->
-<script type="text/javascript">{% include "js/webgl.js" %}</script>
+<!-- <script type="text/javascript">{% include "js/webgl.js" %}</script> -->

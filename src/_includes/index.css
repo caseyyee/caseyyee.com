@@ -201,6 +201,14 @@ article {
   grid-auto-rows: 1fr;
 }
 
+.white-hover {
+  transition: background-color 500ms linear;
+}
+.white-hover:hover {
+  background: white;
+  transition: none;
+}
+
 .work-description {
   padding: 0 0.5rem;
 }

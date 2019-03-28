@@ -1,54 +1,55 @@
 ---
 layout: post.njk
-title: Casey Yee - Firefox Reality
+title: Firefox Reality - Casey Yee
 ---
 
-# Firefox Reality VR Web Browser
+# Firefox Reality: VR Web Browser
 
-## A new way to experience the Web
+## <a name="fxr"></a>A new way to experience the Web
 
-Firefox Reality is a web browser that has been designed from the ground up to work on stand-alone virtual reality headsets like the Oculus Go and Google Daydream.
+Firefox Reality is a web browser that is designed from the ground up to work on standalone Virtual Reality headsets like the Oculus Go and Google Daydream.
 
 <!-- ![Firefox Reality Web Browser using Oculus Go mobile VR headset](/img/fxr/fxr-sketch.png) -->
 
-![Firefox Reality Web Browser using Oculus Go mobile VR headset](/img/fxr/fxr-content.png)
-*Firefox Reality Web Browser using Oculus Go mobile VR headset*
+![Firefox Reality web browser using Oculus Go headset](/img/fxr/fxr-content.png)
+*Firefox Reality using the Oculus Go headset*
 
 Some of the features I helped ship include, immersive 360 and stereo playback, theatre viewing modes, private browsing modes and immersive WebVR capabilities. In addition to this, I worked on web compatability issues, and  worked with content partners to ship experiences to the content feed.
 
-Firefox Reality is the latest evolution of the VR web browser, which we have been exploring since 2012.
+Firefox Reality is the latest evolution of the VR web browser, which we had been exploring since 2014.
 
-* [Explore the immersive web with Firefox Reality.](https://blog.mozilla.org/blog/2018/09/18/firefox-reality-now-available/)
-* [Firefox Reality 1.1 Update](https://www.techcarving.com/2018/12/mozilla-firefox-reality-1-1-update-is-now-available-to-download-with-360-video-support-and-more/)
-## Browser prototypes and concepts
+* [Explore the Immersive Web with Firefox Reality.](https://blog.mozilla.org/blog/2018/09/18/firefox-reality-now-available/)
+* [Firefox Reality version 1.1 announcement.](https://www.techcarving.com/2018/12/mozilla-firefox-reality-1-1-update-is-now-available-to-download-with-360-video-support-and-more/)
 
-### Desktop WebVR
+## <a name="prototypes"></a>Browser prototypes and concepts
 
-At its earliest stages, WebVR started as an extension to the desktop Firefox browsing experience. The creation of the [WebVR API's](../webvr-tools/#webvr-browser-api) made it possible for content to access VR headset and controller orientation and position data, which is then used to render the appropriate stereoscopic views using WebGL into the VR headset.
+### <a name="desktop"></a>Desktop WebVR
+
+At its earliest stages, [WebVR](https://blog.mozvr.com/webvr-lands-in-firefox-nightly/) started as an extension to the desktop Firefox browsing experience. With the creation of the [WebVR API](../webvr-tools/#webvr-browser-api), web pages can use JavaScript to access a VR headset’s headset &amp; controller orientation &amp; position data, then using that data to render the appropriate stereoscopic views using WebGL into the VR headset.
 
 ![Desktop WebVR on Firefox using Oculus DK2 VR headset](/img/fxr/desktop-vr.gif)
-*MozVR website running "Sechelt" experience on Desktop Firefox in WebVR using Oculus DK2 VR headset after "Entering VR"*
+*MozVR website running MozVR’s “Sechelt” WebVR demo on Desktop Firefox in WebVR using the Oculus DK2 VR headset.*
 
 ![Ben Lang from RoadToVR trying out Rainbow Membrand by Cabbibo](/img/fxr/rainbow-membrane.jpg)
-*Ben Lang from RoadToVR trying out Rainbow Membrand by Cabbibo*
+*[Ben Lang](https://twitter.com/benz145) from [_Road to VR_](https://www.roadtovr.com/) trying out “Rainbow Membrane” by [Cabbibo](https://twitter.com/Cabbibo)*
 
-### HIRO
+### <a name="hiro"></a>HIRO
 
-HIRO was the first experiment in VR browser design that I worked on with [Josh Carpenter](http://twitter.com/joshcarpenter) and [Vlad Vukecevic](http://twitter.com/vvuk). The goal was to demonstrate what browsing in VR could be like. HIRO was first debuted at GDC 2015, and was successful in kickstarted interest in WebVR from the likes of Google, Samsung, Microsoft, Oculus, W3C in addition to many others. We also had a fantastic group of early content creators who contributed many experiments and ideas along the way.
+[HIRO](https://github.com/MozillaReality/hiro) was the first experiment in VR browser design that I worked on with [Josh Carpenter](https://twitter.com/joshcarpenter) and [Vlad Vukecevic](https://twitter.com/vvuk). The goal was to demonstrate what web-browsing in VR could be like. HIRO debuted at GDC 2015, and successfully kickstarted interest in WebVR from the likes of Google, Samsung, Microsoft, Oculus, W3C, in addition to many others. We also had a fantastic group of early-adopter content creators who contributed many experiments and ideas along the way.
 
 <div class="video-wrapper">
   <iframe src="https://www.youtube.com/embed/KlZnKW2qVZ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-*Browser navigation concept with fully immersive 3D interface, demonstrating home page to 360 content navigation, loading and transitions.*
+*Browser navigation concept with fully immersive 3D interface, demonstrating home page to 360° content navigation, loading, and transitions.*
 
-At the time, controller solutions were not yet readility available, so we partnered with LEAP motion to integrate a hand-tracking solution for more natural interactions.
+At the time, game controllers were not yet readility available, so we partnered with [Leap Motion](https://www.leapmotion.com/) to integrate a hand-tracking solution for more natural interactions.
 
-* [HIRO Github Source](https://github.com/MozillaReality/hiro)
+* [HIRO GitHub Source](https://github.com/MozillaReality/hiro)
 
-### Horizon
+### <a name="horizon"></a>Horizon
 
-Horizon was the first VR web browser to include immersive mode browsing along with a standard web viewport. I helped build this along with [Josh Carpenter](http://twitter.com/joshcarpenter), [Kevin Grandon](https://twitter.com/Kevining), [Chris Wiemeersch](https://twitter.com/cvanw), [Kearwood "Kip" Gilbert](https://twitter.com/kearwoodgilbert) and [Vlad Vukecevic](http://twitter.com/vvuk).
+[Horizon](https://github.com/MozillaReality/horizon) was the first VR web browser to include immersive browsing along with a standard web viewport. I built this along with [Josh Carpenter](http://twitter.com/joshcarpenter), [Kevin Grandon](https://twitter.com/Kevining), [Chris Van Wiemeersch](https://twitter.com/cvanw), [Kearwood “Kip” Gilbert](https://twitter.com/kearwoodgilbert), and [Vlad Vukecevic](http://twitter.com/vvuk).
 
 <div class="video-raw-wrapper">
   <video class="video-raw" preload controls>
@@ -56,16 +57,16 @@ Horizon was the first VR web browser to include immersive mode browsing along wi
   </video>
 </div>
 
-*Demonstrates 2D and immersive VR Web browsing.*
+*Demonstrates 2D and immersive VR web-browsing.*
 
-Horizon was siginificant in that the entire browser interface was built using CSS-VR. [Learn more about CSS-VR](http://localhost:8080/projects/webvr-tools/#webvr-api)
+Horizon was siginificant in that the entire browser interface was built using [CSS-VR](/projects/webvr-tools/#webvr-api).
 
-## Additional things to checkout
+* [Horizon GitHub Source](https://github.com/MozillaReality/horizon)
 
-* [See WebVR tools that I help build](../webvr-tools)
+## <a name="more"></a>Additional things to check out
+
+* [See WebVR tools that I helped build](../webvr-tools)
 * [Josh Carpenter on VR Browsing Explorations](http://www.joshcarpenter.ca/vr-browsing-explorations)
-* [Puzzle Rain](https://blog.mozvr.com/puzzle-rain/), WebVR experience by [Arturo Paracuellos](arturitu) in collaboration with Mozilla.
-* [VR Link traversal](https://blog.mozvr.com/connecting-virtual-worlds-hyperlinks-in-webvr/)
-* [Etherworld Voxel.js based multi-user VR world](https://github.com/EtherWorld/EtherWorld/)
-
-
+* [_Puzzle Rain_](https://blog.mozvr.com/puzzle-rain/), a WebVR experience by [Arturo Paracuellos](arturitu) in collaboration with Mozilla
+* [Navigating Virtual Links in VR](https://blog.mozvr.com/connecting-virtual-worlds-hyperlinks-in-webvr/)
+* [EtherWorld](https://github.com/EtherWorld/EtherWorld/), a multiuser online VR world builder (built on top of Voxel.js)

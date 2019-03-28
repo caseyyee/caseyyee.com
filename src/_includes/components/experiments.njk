@@ -1,7 +1,7 @@
 <ul class="zero-margin-padding" id="works">
 {% for work in experiments %}
   <li class="list-style-none white-hover">
-    <a href="{{ work.link }}"><img src="{{ work.image }}"></a>
+    <a href="{{ work.link }}"><img src="{{ work.image }}" alt="{{ work.name }}"></a>
     <div class="work-description">
       <h3><a class="bordered background-vapor-purple" href="{{ work.link }}">{{ work.name }}</a></h3>
       <p>{{ work.description }}</p>

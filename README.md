@@ -4,7 +4,7 @@
 
 ### Overview
 
-The site is made with [Eleventy](https://11ty.io/)
+The site is made with the [Eleventy](https://11ty.io/) static-site generator.
 
 ### Local development
 
@@ -12,13 +12,12 @@ The site is made with [Eleventy](https://11ty.io/)
 # clone this repo
 git clone git@github.com:caseyyee/caseyyee.com.git
 
-# goto working directory
+# go to working directory
 cd caseyyee.com
 
-# install depdencies
+# install dependencies
 npm install
 
 # start local server
 npm run start
 ```
-

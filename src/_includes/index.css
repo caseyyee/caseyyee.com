@@ -136,6 +136,10 @@ article {
   font-weight: 600;
 }
 
+.break-on-span span {
+  display: inline-block;
+}
+
 .flex-1 {
   flex: 1;
 }

@@ -8,4 +8,3 @@ input.addEventListener('input', function (e) {
     window.scrollTo(0, 0);
   }
 });
-

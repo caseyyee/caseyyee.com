@@ -10,7 +10,6 @@
   --vapor-yellow: #FFFECD;
 }
 
-
 .background-vapor-pink {
   background-color: var(--vapor-pink);
 }
@@ -46,13 +45,11 @@ body {
 
 a {
   text-decoration: none;
-  /*color: var(--link-color);*/
   color: inherit;
   font-weight: bold;
 }
 
 a:visited {
-  /*color: var(--link-color);*/
   color: #1F4A68;
 }
 
@@ -78,7 +75,7 @@ a.bordered {
   border: 3px solid #000;
   text-decoration: none;
   padding: 0.2rem 0.8rem;
-  box-shadow: 5px 5px 0px #000;
+  box-shadow: 5px 5px 0 #000;
   margin: 0.8rem 0.5rem 0 0;
 }
 
@@ -87,17 +84,16 @@ a.bordered:hover {
 }
 
 h1, h2 {
+  line-height: 1.2em;
 }
 
 h1 {
   font-size: 2.5em;
-  line-height: 1.2em;
   font-weight: normal;
 }
 
 h2 {
   font-size: 1.7em;
-  line-height: 1.2em;
   font-weight: 700;
 }
 
@@ -138,6 +134,10 @@ article {
 
 .bold {
   font-weight: 600;
+}
+
+.break-on-span span {
+  display: inline-block;
 }
 
 .flex-1 {
@@ -204,8 +204,9 @@ article {
 .white-hover {
   transition: background-color 500ms linear;
 }
+
 .white-hover:hover {
-  background: white;
+  background: #fff;
   transition: none;
 }
 
@@ -264,8 +265,7 @@ canvas {
   display: none;
 }
 
-#menuToggle
-{
+#menuToggle {
   display: block;
   z-index: 1;
   -webkit-user-select: none;
@@ -278,8 +278,8 @@ canvas {
   height: 32px;
   position: absolute;
   cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  opacity: 0; /* Hide this */
+  z-index: 2; /* And place it over the hamburger */
   -webkit-touch-callout: none;
 }
 
@@ -292,21 +292,21 @@ canvas {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #000000;
+  background: #000;
   border-radius: 3px;
   z-index: 1;
-  transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+  transform-origin: 4px 0;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1),
               opacity 0.55s ease;
 }
 
 #menuToggle span:first-child {
-  transform-origin: 0% 0%;
+  transform-origin: 0 0;
 }
 
 #menuToggle span:nth-last-child(2) {
-  transform-origin: 0% 100%;
+  transform-origin: 0 100%;
 }
 
 /*
@@ -336,8 +336,7 @@ body[data-menu-open="true"] {
  * Make this absolute positioned
  * at the top left of the screen
  */
-#menu
-{
+#menu {
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -347,8 +346,8 @@ body[data-menu-open="true"] {
   padding-top: 125px;
   background: var(--vapor-cyan);
   list-style-type: none;
-  -webkit-font-smoothing: antialiased;/* to stop flickering of text in safari */
-  transform-origin: 0% 0%;
+  -webkit-font-smoothing: antialiased; /* To stop flickering of text in Safari */
+  transform-origin: 0 0;
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
@@ -367,6 +366,7 @@ body[data-menu-open="true"] {
     font-size: 1.8em;
     margin: 0.4em 0;
   }
+
   h2 {
     font-size: 1.3em;
     line-height: 1.2em;
@@ -378,7 +378,7 @@ body[data-menu-open="true"] {
   }
 }
 
-/* Burger menu*/
+/* Burger menu */
 @media (max-width: 540px) {
   .menu-secondary {
     display: none;

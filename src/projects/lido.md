@@ -1,18 +1,17 @@
 ---
 layout: post.njk
-title: Casey Yee - LIDO by Bosa
+title: LIDO by Bosa - Casey Yee
 ---
 
 # LIDO Presentation Center
 
-## by BOSA Properties
+## by Bosa Properties
 
-Creation of a state of the art real-estate sales center experience for BOSA properties.
+Created a state-of-the-art experience for a real-estate sales center for [BOSA Properties](https://bosaproperties.com/).
 
-* Design, production and engineering of Entrance matrix display
-* Design and engineering of environmental projection with multiple stitched projectors.
-* Design and development of interactive view and visualization system
-
+* Designed, produced, and engineered the entrance matrix display.
+* Designed and engineered the environmental projection with multiple stitched projectors.
+* Designed and developed the interactive view and visualization systems.
 
 ![](/img/lido/LIDO1.jpg)
 

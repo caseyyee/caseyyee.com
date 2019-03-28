@@ -1,36 +1,44 @@
-[{
-  "name": "Firefox Reality",
-  "image": "/img/fxr-content.png",
-  "description": "Web Browser for mobile VR headsets.",
-  "link": "/projects/firefox-reality"
-},{
-  "name": "WebVR Content Tools",
-  "image": "/img/aframe-ui-widgets.gif",
-  "description": "Content creation and prototyping tools for WebVR.",
-  "link": "/projects/webvr-tools"
-},{
-  "name": "Firefox OS",
-  "image": "/img/fxos/fxos-3.jpg",
-  "description": "Open-source mobile phone OS made entirely with web technologies.",
-  "link": "/projects/firefox-os"
-},{
-  "name": "Air Jordan 12",
-  "image": "/img/aj2012/AJ2012-shoe.jpg",
-  "description": "Website for Nike Air Jordan sneakers.",
-  "link": "/projects/aj2012"
-},{
-  "name": "LIDO by BOSA",
-  "image": "/img/lido/LIDO4.jpg",
-  "description": "State of the art real-estate sales center experience for BOSA properties.",
-  "link": "/projects/lido"
-},{
-  "name": "VFS Digital Design",
-  "image": "/img/vfs/oomph3.jpg",
-  "description": "UX, Web and Physical computing programs at Vancouver Film School.",
-  "link": "/projects/vfs"
-},{
-  "name": "Word In Your Hand",
-  "image": "/img/wiyh/wiyh-11.jpg",
-  "description": "Custom booth experience for Johnson & Johnson.",
-  "link": "/projects/wiyh"
-}]
+[
+  {
+    "name": "Firefox Reality",
+    "image": "/img/fxr-content.png",
+    "description": "Web Browser for mobile VR headsets.",
+    "link": "/projects/firefox-reality"
+  },
+  {
+    "name": "WebVR Content Tools",
+    "image": "/img/aframe-ui-widgets.gif",
+    "description": "Content creation and prototyping tools for WebVR.",
+    "link": "/projects/webvr-tools"
+  },
+  {
+    "name": "Firefox OS",
+    "image": "/img/fxos/fxos-3.jpg",
+    "description": "Open-source mobile phone OS made entirely with web technologies.",
+    "link": "/projects/firefox-os"
+  },
+  {
+    "name": "Air Jordan 12",
+    "image": "/img/aj2012/AJ2012-shoe.jpg",
+    "description": "Website for Nike Air Jordan sneakers.",
+    "link": "/projects/aj2012"
+  },
+  {
+    "name": "LIDO by Bosa",
+    "image": "/img/lido/LIDO4.jpg",
+    "description": "State-of-the-art real-estate sales center experience for Bosa Properties.",
+    "link": "/projects/lido"
+  },
+  {
+    "name": "VFS Digital Design",
+    "image": "/img/vfs/oomph3.jpg",
+    "description": "UX, Web Development, and Physical Computing programs at Vancouver Film School.",
+    "link": "/projects/vfs"
+  },
+  {
+    "name": "Word in Your Hand",
+    "image": "/img/wiyh/wiyh-11.jpg",
+    "description": "Custom booth experiences for Johnson & Johnson.",
+    "link": "/projects/wiyh"
+  }
+]

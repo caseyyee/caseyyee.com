@@ -1,7 +1,10 @@
-[{
-  "name": "Mentions",
-  "link": "/posts"
-},{
-  "name": "Interests",
-  "link": "/interests"
-}]
+[
+  {
+    "name": "Articles",
+    "link": "/articles"
+  },
+  {
+    "name": "About",
+    "link": "/interests"
+  }
+]

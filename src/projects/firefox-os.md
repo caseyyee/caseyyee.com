@@ -1,24 +1,23 @@
 ---
 layout: post.njk
-title: Casey Yee - Firefox OS
+title: Firefox OS - Casey Yee
 ---
 
 # Firefox OS
 
-Firefox OS is a open-source, smartphone OS built entirely from Web technologies by Mozilla.
+[Firefox OS](https://techcrunch.com/2013/08/25/firefox-os-gives-the-open-web-gets-central-billing/) was an open-source built entirely from Open Web technologies by [Mozilla](https://www.mozilla.org/).
 
-![Firefox OS Branding](/img/fxos/fxos-2.jpg)
+![Firefox OS branding](/img/fxos/fxos-2.jpg)
 
 I arrived early in the project and helped design and prototype many of the core user experience of the OS.
 
-* User flows and interaction design for key applications including Email, Calendar, Photo, Contacts.
-* Notification, permissions, dialogues and other core system UX.
-* UI styles, guides and kit.
-* Explored and prototype various designs around lock screen.
-* Collaborated and worked with partners from various vendors.
+- User flows and interaction design for key applications including Email, Calendar, Photo, Contacts, and the Lockscreen
+- Designed UX and UI patterns for system-level Notifications, Permissions, and Dialogues
+- Co-created Firefox OS design system and UI style guide
+- Collaborated with external partners, including hardware vendors.
 
-![Firefox OS Branding](/img/fxos/firefox-os-screens.jpg)
-*Homescreen, browser and productivity application screens*
+![Firefox OS branding](/img/fxos/firefox-os-screens.jpg)
+*Homescreen, browser, and productivity application screens*
 
 <!-- ![Firefox OS Branding](/img/fxos/fxos-3.jpg)
 ![Firefox OS Branding](/img/fxos/fxos-4.jpg)

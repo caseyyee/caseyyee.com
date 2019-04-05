@@ -1,20 +1,46 @@
 ---
 layout: base.njk
 title: Casey Yee
-description: 🤘 Click it! … if you want learn a little more about me 👀.
+description: 🤘 Click it! … if you want learn a little more about me 👀. 
 ---
-<p class="centered"><img class="round-avatar" src="{{ "/img/casey.jpg" | url }}" alt="Hello! I’m Casey Yee."></p>
+  
+    <div class="hero">
+      <div class="hero-image">
+        <img src="{{ " /img/casey.jpg" | url }}" alt="Hello! I’m Casey Yee."/>
+      </div>
 
-<h1>Hello! I'm Casey.<br>
-I solve problems with Design & Code.<br>
-I also love a good product.</h1>
+      <div>
+        <h1>Creative<br/>
+          Design&nbsp;+<br/>
+          Code</h1>
 
-<h2>On the lookout for creative partners who are as excited as I am about the future and what’s possible.</h2>
+        <p>Product Design, Immersive AR/VR UI &amp; UX, Full-stack Web</p>
 
-{% include "components/works.njk" %}
+        <p>On the lookout for creative partners who are excited about making great product.</p>
 
-<h2>Fun smaller projects, experiments &amp; explorations</h2>
+        <p>Based out of Vancouver, BC</p>
+      </div>
 
-{% include "components/experiments.njk" %}
+      <div>
+        <div class="hero-menu">
+          <a href="/interests" class="bordered align-center">About me</a>
+          <a href="/articles" class="bordered align-center">Articles</a>
+          <a href="mailto:caseyyee.ca@gmail.com" class="bordered align-center">👋&nbsp; Say Hi!</a>
+          <a href="https://twitter.com/whoyee" target="_blank" class="bordered align-center">Twitter</a>
+          <a href="http://github.com/caseyyee" target="_blank" class="bordered align-center">Github</a>
+          <a href="https://www.linkedin.com/in/whoyee/" target="_blank" class="bordered align-center">LinkedIn</a>
+        </div>  
+      </div>
+    </div>
+  
 
-<!-- <script type="text/javascript">{% include "js/webgl.js" %}</script> -->
+  <div class="container">
+    <h1>Selected Work</h1>
+    {% include "components/works.njk" %}
+
+    <h1>Experiments &amp; Explorations</h1>
+    {% include "components/experiments.njk" %}
+  </div>
+
+
+{# <script type="text/javascript">{% include "js/webgl.js" %}</script> #}

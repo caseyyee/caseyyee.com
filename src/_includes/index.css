@@ -36,7 +36,7 @@ html {
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   padding: 0;
   margin: 0;
   background: #F1F2F7;
@@ -72,11 +72,11 @@ a.minimal:hover {
 a.bordered {
   display: inline-block;
   color: #000;
-  border: 3px solid #000;
+  /*border: 3px solid #000;*/
   text-decoration: none;
-  padding: 0.2rem 0.8rem;
-  box-shadow: 5px 5px 0 #000;
-  margin: 0.8rem 0.5rem 0 0;
+  /*padding: 0.2rem 0.8rem;*/
+  /*box-shadow: 5px 5px 0 #000;*/
+  /*margin: 0.8rem 0.5rem 0 0;*/
 }
 
 a.bordered:hover {
@@ -88,17 +88,17 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 1.8em;
   font-weight: normal;
 }
 
 h2 {
-  font-size: 1.7em;
+  font-size: 1.2em;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 700;
 }
 
@@ -114,13 +114,56 @@ article {
   line-height: 26px;
 }
 
-#container {
+#top {
+  width: 100%;
+  /*background: white;*/
+ /* background: -webkit-linear-gradient(#003E5E, #07216A);*/
+ background-image: url('img/bg.jpg');
+}
+
+.hero {
+  display: flex;
+  position: relative;
+  top: 4rem;
+  /*background: -webkit-linear-gradient(#EE1316, #14C7FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
+  padding: 1rem;
+}
+.hero > *:nth-child(1) {
+  position: relative;
+  top: -20px;
+  left: 20px;
+}
+.hero > *:nth-child(2) {
+  padding: 0 3rem;
+  background: #8DF2D9;
+}
+
+.hero > *:nth-child(3) {
+  color: white;
+  width: 33%;
+  padding: 1rem;
+}
+.hero h1 {
+  /*color: white;*/
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.hero h2 {
+  /*color: white;*/
+  font-size: 1.3rem;
+}
+
+.container {
   max-width: var(--max-layout-width);
   margin: auto;
   padding: 1em;
 }
 
 .image-width-100 img {
+  border-radius: 10px;
   width: 100%;
 }
 
@@ -199,6 +242,7 @@ article {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-auto-rows: 1fr;
+  grid-gap: 1rem;
 }
 
 .white-hover {
@@ -211,7 +255,12 @@ article {
 }
 
 .work-description {
-  padding: 0 0.5rem;
+  width: 90%;
+  position: relative;
+  top: -5%;
+  left: 5%;
+  background: white;
+  padding: 10px;
 }
 
 .work-description h3 {
@@ -228,6 +277,22 @@ article {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   grid-gap: 0.5rem;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.skills ul {
+  padding: 0;
+}
+.skills li {
+  /*border-right: 1px solid gray;*/
+  border-bottom: 1px solid gray;
+  padding: 0.5rem;
+  list-style: none;
+  font-size: 0.8rem;
 }
 
 .project-summary {

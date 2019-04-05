@@ -3,18 +3,69 @@ layout: base.njk
 title: Casey Yee
 description: 🤘 Click it! … if you want learn a little more about me 👀.
 ---
-<p class="centered"><img class="round-avatar" src="{{ "/img/casey.jpg" | url }}" alt="Hello! I’m Casey Yee."></p>
 
-<h1>Hello! I'm Casey.<br>
-I solve problems with Design & Code.<br>
-I also love a good product.</h1>
+<div id="top">
+  <div class="container">
+    <p>
+    <div class="hero">
+      <div>
+        <img style="width: 200px; height: 200px;" src="{{ "/img/casey.jpg" | url }}" alt="Hello! I’m Casey Yee.">
+      </div>
+      <div>
+        <h1>Hello! I'm Casey.<br>
+        I solve problems with Design & Code.<br>
+        I also love a good product.</h1>
 
-<h2>On the lookout for creative partners who are as excited as I am about the future and what’s possible.</h2>
+        <h2>On the lookout for creative partners who are as excited as I am about the future and what’s possible.</h2>
+      </div>
+      <div>
+        / Twitter<br/>
+        / Email<br/>
+        / About me<br/>
+      </div>
+    </div>
+  </div>
+</div>
 
-{% include "components/works.njk" %}
+<div class="container">
+  <br/><br/>
+  <h2>What I do</h2>
 
-<h2>Fun smaller projects, experiments &amp; explorations</h2>
+  <div class="skills">
+    <div id="professional">
+      <ul>
+        <li>Product Design</li>
+        <li>UX/UI Design</li>
+        <li>AR/VR/MR</li>
+      </ul>
+    </div>
 
-{% include "components/experiments.njk" %}
+    <div id="technology">
+      <ul>
+        <li>Full stack Web</li>
+        <li>React, Node, WebGL</li>
+        <li>JavaScript, C#</li>
+      </ul>
+    </div>
+
+    <div id="design">
+      <ul>
+        <li>Adobe Creative Suite</li>
+        <li>Sketch, Figma</li>
+        <li>Blender</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Featured work</h2>
+
+  {% include "components/works.njk" %}
+
+  <h2>Fun smaller projects, experiments &amp; explorations</h2>
+
+  {% include "components/experiments.njk" %}
+</div>
 
 <!-- <script type="text/javascript">{% include "js/webgl.js" %}</script> -->

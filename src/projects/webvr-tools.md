@@ -7,14 +7,14 @@ title: WebVR Tools - Casey Yee
 
 The challenge for WebVR, is to get people creating content. To solve this, I helped create a number of tools and experiences that helped kickstart interest in creating WebVR content. We also used these tools for our own explorations and prototypes.
 
-<!-- <h3>
+<p>
   <a class="bordered" href="#unity-webvr-assets">Unity WebVR Assets</a>
-  <a class="bordered" href="#aframe">A-Frame</a><br/>
+  <a class="bordered" href="#aframe">A-Frame</a>
   <a class="bordered" href="#aframe-ui-widgets">UI Widgets</a>
   <a class="bordered" href="#webvr-api">WebVR Browser API</a>
   <a class="bordered" href="#puzzle-rain">Puzzle Rain</a>
   <a class="bordered" href="#sketch2three">Sketch2three</a>
-</h3> -->
+</p>
 
 <br>
 

@@ -43,7 +43,7 @@ body {
   font-size: 16px;
   padding: 0;
   margin: 0;
-  background: #f1f1f1;
+  background: #fff;
   color: var(--dark-blue);
   -webkit-text-size-adjust: 100%;
 }
@@ -77,7 +77,6 @@ a.bordered {
   border: 1px solid var(--dark-blue);
   text-decoration: none;
   padding: 0.2rem 0.8rem;
-  /*box-shadow: 5px 5px 0 #000;*/
   margin: 0.2rem;
 }
 
@@ -235,6 +234,9 @@ ul {
   margin-top: 0;
 }
 
+article {
+  line-height: 1.8rem;
+}
 article img {
   margin: 0 -1rem 0 -1rem;
   width: 100vw;
@@ -607,12 +609,9 @@ body[data-menu-open="true"] {
 
 /* phone */
 @media (max-width: 540px) {
-  header {
-    background:white;
-  }
-
   .hero {
     padding-top: 0;
+    text-align: center;
   }
 
   h1 {

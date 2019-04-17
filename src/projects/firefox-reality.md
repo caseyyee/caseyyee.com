@@ -1,9 +1,8 @@
 ---
 layout: post.njk
 title: Firefox Reality - Casey Yee
+heading: Firefox Reality VR Web Browser
 ---
-
-# Firefox Reality: VR Web Browser
 
 ## <a name="fxr"></a>A new way to experience the Web
 
@@ -12,14 +11,14 @@ Firefox Reality is a web browser that is designed from the ground up to work on 
 <!-- ![Firefox Reality Web Browser using Oculus Go mobile VR headset](/img/fxr/fxr-sketch.png) -->
 
 ![Firefox Reality web browser using Oculus Go headset](/img/fxr/fxr-content.png)
-*Firefox Reality using the Oculus Go headset*
+_Firefox Reality using the Oculus Go headset_
 
-Some of the features I helped ship include, immersive 360 and stereo playback, theatre viewing modes, private browsing modes and immersive WebVR capabilities. In addition to this, I worked on web compatability issues, and  worked with content partners to ship experiences to the content feed.
+Some of the features I helped ship include, immersive 360 and stereo playback, theatre viewing modes, private browsing modes and immersive WebVR capabilities. In addition to this, I worked on web compatability issues, and worked with content partners to ship experiences to the content feed.
 
 Firefox Reality is the latest evolution of the VR web browser, which we had been exploring since 2014.
 
-* [Explore the Immersive Web with Firefox Reality.](https://blog.mozilla.org/blog/2018/09/18/firefox-reality-now-available/)
-* [Firefox Reality version 1.1 announcement.](https://www.techcarving.com/2018/12/mozilla-firefox-reality-1-1-update-is-now-available-to-download-with-360-video-support-and-more/)
+- [Explore the Immersive Web with Firefox Reality.](https://blog.mozilla.org/blog/2018/09/18/firefox-reality-now-available/)
+- [Firefox Reality version 1.1 announcement.](https://www.techcarving.com/2018/12/mozilla-firefox-reality-1-1-update-is-now-available-to-download-with-360-video-support-and-more/)
 
 ## <a name="prototypes"></a>Browser prototypes and concepts
 
@@ -28,10 +27,10 @@ Firefox Reality is the latest evolution of the VR web browser, which we had been
 At its earliest stages, [WebVR](https://blog.mozvr.com/webvr-lands-in-firefox-nightly/) started as an extension to the desktop Firefox browsing experience. With the creation of the [WebVR API](../webvr-tools/#webvr-browser-api), web pages can use JavaScript to access a VR headset’s headset &amp; controller orientation &amp; position data, then using that data to render the appropriate stereoscopic views using WebGL into the VR headset.
 
 ![Desktop WebVR on Firefox using Oculus DK2 VR headset](/img/fxr/desktop-vr.gif)
-*MozVR website running MozVR’s “Sechelt” WebVR demo on Desktop Firefox in WebVR using the Oculus DK2 VR headset.*
+_MozVR website running MozVR’s “Sechelt” WebVR demo on Desktop Firefox in WebVR using the Oculus DK2 VR headset._
 
 ![Ben Lang from RoadToVR trying out Rainbow Membrand by Cabbibo](/img/fxr/rainbow-membrane.jpg)
-*[Ben Lang](https://twitter.com/benz145) from [_Road to VR_](https://www.roadtovr.com/) trying out “Rainbow Membrane” by [Cabbibo](https://twitter.com/Cabbibo)*
+_[Ben Lang](https://twitter.com/benz145) from [*Road to VR*](https://www.roadtovr.com/) trying out “Rainbow Membrane” by [Cabbibo](https://twitter.com/Cabbibo)_
 
 ### <a name="hiro"></a>HIRO
 
@@ -41,11 +40,11 @@ At its earliest stages, [WebVR](https://blog.mozvr.com/webvr-lands-in-firefox-ni
   <iframe src="https://www.youtube.com/embed/KlZnKW2qVZ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-*Browser navigation concept with fully immersive 3D interface, demonstrating home page to 360° content navigation, loading, and transitions.*
+_Browser navigation concept with fully immersive 3D interface, demonstrating home page to 360° content navigation, loading, and transitions._
 
 At the time, game controllers were not yet readility available, so we partnered with [Leap Motion](https://www.leapmotion.com/) to integrate a hand-tracking solution for more natural interactions.
 
-* [HIRO GitHub Source](https://github.com/MozillaReality/hiro)
+- [HIRO GitHub Source](https://github.com/MozillaReality/hiro)
 
 ### <a name="horizon"></a>Horizon
 
@@ -57,16 +56,16 @@ At the time, game controllers were not yet readility available, so we partnered 
   </video>
 </div>
 
-*Demonstrates 2D and immersive VR web-browsing.*
+_Demonstrates 2D and immersive VR web-browsing._
 
 Horizon was siginificant in that the entire browser interface was built using [CSS-VR](/projects/webvr-tools/#webvr-api).
 
-* [Horizon GitHub Source](https://github.com/MozillaReality/horizon)
+- [Horizon GitHub Source](https://github.com/MozillaReality/horizon)
 
 ## <a name="more"></a>Additional things to check out
 
-* [See WebVR tools that I helped build](../webvr-tools)
-* [Josh Carpenter on VR Browsing Explorations](http://www.joshcarpenter.ca/vr-browsing-explorations)
-* [_Puzzle Rain_](https://blog.mozvr.com/puzzle-rain/), a WebVR experience by [Arturo Paracuellos](arturitu) in collaboration with Mozilla
-* [Navigating Virtual Links in VR](https://blog.mozvr.com/connecting-virtual-worlds-hyperlinks-in-webvr/)
-* [EtherWorld](https://github.com/EtherWorld/EtherWorld/), a multiuser online VR world builder (built on top of Voxel.js)
+- [See WebVR tools that I helped build](../webvr-tools)
+- [Josh Carpenter on VR Browsing Explorations](http://www.joshcarpenter.ca/vr-browsing-explorations)
+- [_Puzzle Rain_](https://blog.mozvr.com/puzzle-rain/), a WebVR experience by [Arturo Paracuellos](arturitu) in collaboration with Mozilla
+- [Navigating Virtual Links in VR](https://blog.mozvr.com/connecting-virtual-worlds-hyperlinks-in-webvr/)
+- [EtherWorld](https://github.com/EtherWorld/EtherWorld/), a multiuser online VR world builder (built on top of Voxel.js)

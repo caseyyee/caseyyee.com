@@ -1,8 +1,10 @@
-<ul class="main-menu">
-  <li class="list-style-none menu-burger">{% include "components/burger-menu.njk" %}</li>
-  <li class="list-style-none bold"><a href="/" class="minimal">Casey Yee</a></li>
-  {% for nav in menu %}
-    <li class="list-style-none menu-secondary"><a href="{{ nav.link }}" class="minimal">{{ nav.name }}</a></li>
-  {% endfor %}
-  <li class="list-style-none flex-1 right">👋&nbsp; <a class="minimal" href="mailto:caseyyee.ca@gmail.com">Say Hi!</a></li>
-</ul>
+<header class="container">
+    <ul class="main-menu m-0">
+      <li class="list-style-none menu-burger">{% include "components/burger-menu.njk" %}</li>
+      <li class="list-style-none"><a href="/">Casey Yee</a></li>
+      {% for nav in menu %}
+        <li class="list-style-none menu-secondary"><a href="{{ nav.link }}" class="minimal">{{ nav.name }}</a></li>
+      {% endfor %}
+      <li class="list-style-none flex-1 align-right"><a class="minimal" href="mailto:caseyyee.ca@gmail.com">👋&nbsp; Say Hi!</a></li>
+    </ul>
+</header>

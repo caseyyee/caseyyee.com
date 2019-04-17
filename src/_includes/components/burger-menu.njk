@@ -24,10 +24,10 @@ https://codepen.io/ibnalkhwarizmi/pen/EremLG
     Too bad the menu has to be inside of the button,
     but, hey, it's pure CSS magic.
     -->
-    <ul id="menu" class="centered">
+    <ul id="menu" class="align-center">
       <h1>Hello!</h1>
 
-      <li><a class="bordered background-vapor-yellow" href="/">Casey Yee</a></li>
+      <li><a class="bordered bold" href="/">Casey Yee</a></li>
       {% for nav in menu %}
         <li><a class="bordered" href="{{ nav.link }}">{{ nav.name }}</a></li>
       {% endfor %}

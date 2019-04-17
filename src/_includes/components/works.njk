@@ -1,10 +1,12 @@
-<ul class="zero-margin-padding" id="works">
+<ul class="works p-0 m-0">
 {% for work in works %}
-  <li class="list-style-none white-hover">
-    <a href="{{ work.link }}"><img src="{{ work.image }}"></a>
-    <div class="work-description">
-      <h3><a class="bordered background-vapor-cyan" href="{{ work.link }}">{{ work.name }}</a></h3>
-      <p>{{ work.description }}</p>
+  <li class="list-style-none">
+    <div>
+      <a href="{{ work.link }}"><img src="{{ work.image }}"></a>
+      <div class="work-description align-center">
+        <h3>{{ work.name }}</h3>
+        <p>{{ work.description }}</p>
+      </div>
     </div>
   </li>
 {% endfor %}

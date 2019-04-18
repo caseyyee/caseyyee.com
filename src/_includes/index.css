@@ -90,7 +90,7 @@ h2 {
 }
 
 h1 {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 
 h2 {
@@ -130,8 +130,8 @@ ul {
 }
 
 .hero h1 {
-  font-size: 6rem;
-  line-height: 5.5rem;
+  font-size: 5.8rem;
+  line-height: 5.4rem;
   font-weight: 700;
   margin: 0;
 }
@@ -155,16 +155,32 @@ ul {
   grid-column-start: 2;
   grid-column-end: span 3;
   grid-row-end: span 2;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .hero > *:nth-child(3) {
   /* menu */
 }
 
-.hero-menu {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.hero-menu > * {
+  display: block;
+  padding: 0.5rem;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+}
+
+.hero-menu > *:not(:last-child) {
+  border-bottom: 1px solid var(--dark-blue);
+}
+
+.hero-menu > a {
+  font-size: 1.2rem;
+}
+
+.hero-icons {
+  font-size: 1.5rem;
+  margin-right: 1rem;
 }
 
 .underline-hidden {
@@ -614,12 +630,10 @@ body[data-menu-open="true"] {
     text-align: center;
   }
 
-  h1 {
+  h1, h2, h3 {
     text-align: center;
   }
-  h2 {
-    text-align: center;
-  }
+  
 }
 
 /* Burger menu */

@@ -25,7 +25,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Press - Casey Yee</title>
+  <title>Creating a collection of refs using React - Casey Yee</title>
 
   <script>
     (function () {
@@ -41,7 +41,7 @@
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="caseyyee.com">
-  <meta name="twitter:title" content="Press - Casey Yee">
+  <meta name="twitter:title" content="Creating a collection of refs using React - Casey Yee">
   <meta name="twitter:creator" content="@whoyee">
   <meta name="twitter:description" content="">
   <meta name="twitter:image" content="https://caseyyee.com/img/casey.jpg">
@@ -132,58 +132,52 @@ https://codepen.io/ibnalkhwarizmi/pen/EremLG
 
   
 <article class="container">
-  <h1>Articles, Writing and Mentions</h1>
-  <h2>Podcasts</h2>
+  <h1></h1>
+  <h1>Creating a collection of refs</h1>
+<p>Say you wanted to create a dynamic list of elements, and say you needed access to the DOM node to imperatively alter each one.</p>
+<p>To do this, you would need to create a collection of refs. Seems easy enough, and there are several approaches that you might try, but this seems like the only one that seems to work properly.</p>
+<pre><code class="language-js">const MyComponent = () =&gt; {
+  // Create an array on component instance with useRef. Normal arrays dont work here.
+  const refs = useRef([]);
+
+  const useEffect(()=&gt; {
+    // you can now iterate through your collection
+    elements.map(element =&gt; {
+      // do something!
+    })
+  },[])
+
+  const createElements = () =&gt; {
+    let elements = [];
+    for (let index = 0; index &lt; 10; index++) {
+      elements.push(
+        &lt;div
+          key={`child-${i}`}
+          // Push the ref onto the refs array.
+          ref={(ref) =&gt; refs.current.push(ref)}&gt;
+          Box {i}
+        &lt;/div&gt;
+      );
+    }
+    return elements;
+  };
+  return &lt;div&gt;{createElements()}&lt;/div&gt;;
+};
+</code></pre>
+<h2>Example use of pattern</h2>
+<p>And with that. Here's a real world application of this pattern that visualizes your mic audio input.</p>
+<iframe
+  src="https://codesandbox.io/embed/sound-meter-omvfl?fontsize=14&hidenavigation=1&theme=dark"
+  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+  title="sound-meter"
+  allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
+  sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+></iframe>
+<h2>Why this pattern was chosen</h2>
+<p>We're drawing a bunch of <code>&lt;div&gt;</code> elements that we want to transform based on audio input. Because we're updating these elements repeatedly in a tight loop several times a second, using state or modifying properties causes signficant overhead due to the component re-rendering at a high rate. To avoid this, running these transforms in our own loop directly on the DOM elements offers a quick by-pass around react.</p>
+<h2>Credit</h2>
 <ul>
-<li><strong><a href="https://austinknight.com/">UX and Growth Podcast</a></strong><iframe width="100%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/317110114&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
-</li>
-</ul>
-<p><em>Austin Knight and Casey Yee</em></p>
-<h2>Mentions</h2>
-<ul>
-<li>
-<p><strong><a href="https://www.wired.com/2017/02/gotta-try-diy-virtual-reality-even-make-hideous-things/">You Gotta Try DIY Virtual Reality Even if You Make Hideous Things</a></strong>
-<em>WIRED, Clive Thompson, February 2017</em></p>
-</li>
-<li>
-<p><strong><a href="https://killscreen.com/versions/future-internet-coming-vr/">The Future of the Internet is Coming and it’s in VR</a></strong>
-<em>KILLSCREEN \\VERSIONS, Jason Johnson</em></p>
-</li>
-<li>
-<p><strong><a href="https://www.fastcompany.com/3058591/why-a-virtual-reality-web-may-never-happen">Why a Virtual Reality Web May Never Happen</a></strong>
-<em>Fast Company, Mark Wilson</em></p>
-</li>
-</ul>
-<h2>Articles &amp; Presentations</h2>
-<ul>
-<li>
-<p><strong><a href="https://hacks.mozilla.org/2018/02/create-vr-on-the-web-using-unity3d/">Create VR on the Web Using Unity3D</a></strong>
-<em>Mozilla Hacks, Casey Yee, February 2018</em></p>
-</li>
-<li>
-<p><strong><a href="https://hacks.mozilla.org/2016/12/w3c-workshop-on-web-and-virtual-reality-a-look-ahead/">W3C Workshop on Web and Virtual Reality: A Look Ahead</a></strong>
-<em>Mozilla Hacks, Chris Van Wiemeersch, Casey Yee, December 2016</em></p>
-</li>
-<li>
-<p><strong><a href="https://blog.mozvr.com/connecting-virtual-worlds-hyperlinks-in-webvr/">Connecting Virtual Worlds: Hyperlinks in WebVR</a></strong>
-<em>Mozilla Mixed Reality Blog, Casey Yee, November 2016</em></p>
-</li>
-<li>
-<p><strong><a href="https://docs.google.com/presentation/d/1-11zrfO2_hREeBWM71MAXvKDE0Uo1Xqemgnzu63GcbY/edit#slide=id.g3ddd7ddd2c_0_0">Tech in Asian 2016 - Tokyo</a></strong>
-<em>Casey Yee &amp; Chris Van Wiemeersch, February 2016</em></p>
-</li>
-<li>
-<p><strong><a href="https://blog.mozvr.com/puzzle-rain/">Puzzle Rain: A Musical WebVR Journey for the HTC Vive</a></strong>
-<em>Mozilla Mixed Reality Blog, Casey Yee, October 2016</em></p>
-</li>
-<li>
-<p><strong><a href="https://blog.mozvr.com/oculus-home-rift-cv1-webvr/">Everything you wanted to know about Oculus CV1, Oculus Home, 1.3 runtime and WebVR</a></strong>
-<em>Mozilla Mixed Reality Blog, Casey Yee, April 2016</em></p>
-</li>
-<li>
-<p><strong><a href="https://hacks.mozilla.org/2016/03/introducing-the-webvr-1-0-api-proposal/">Introducing the WebVR 1.0 API Proposal</a></strong>
-<em>Mozilla Hacks, Casey Yee, March 2016</em></p>
-</li>
+<li>After a bunch of hair-pulling, I found <a href="https://dev.to/ajsharp/-an-array-of-react-refs-pnf">this dev.to post</a> with the hints I needed to make this work.</li>
 </ul>
 
 </article>

@@ -4,6 +4,10 @@
     "link": "/articles"
   },
   {
+    "name": "Notes",
+    "link": "/notes"
+  },
+  {
     "name": "About",
     "link": "/interests"
   }

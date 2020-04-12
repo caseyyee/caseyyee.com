@@ -40,3 +40,4 @@ It's not the most elegant, but it does work.
 ## Additional information
 
 - [See my Spectrum chat question](https://spectrum.chat/react-three-fiber/general/using-usecontext-hook-within-canvas~41e3bc4a-28c2-4318-930c-df8be8d3a014)
+- [React Github Issue](https://github.com/facebook/react/issues/13336#issuecomment-414709155)

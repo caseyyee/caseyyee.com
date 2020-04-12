@@ -5,7 +5,7 @@ title: Firefox OS - Casey Yee
 
 # Firefox OS
 
-[Firefox OS](https://techcrunch.com/2013/08/25/firefox-os-gives-the-open-web-gets-central-billing/) was an open-source built entirely from Open Web technologies by [Mozilla](https://www.mozilla.org/).
+[Firefox OS](https://techcrunch.com/2013/08/25/firefox-os-gives-the-open-web-gets-central-billing/) is an open-source mobile operating system built entirely from Open Web technologies by [Mozilla](https://www.mozilla.org/).
 
 ![Firefox OS branding](/img/fxos/fxos-2.jpg)
 
@@ -17,7 +17,7 @@ I arrived early in the project and helped design and prototype many of the core 
 - Collaborated with external partners, including hardware vendors.
 
 ![Firefox OS branding](/img/fxos/firefox-os-screens.jpg)
-*Homescreen, browser, and productivity application screens*
+_Homescreen, browser, and productivity application screens_
 
 <!-- ![Firefox OS Branding](/img/fxos/fxos-3.jpg)
 ![Firefox OS Branding](/img/fxos/fxos-4.jpg)

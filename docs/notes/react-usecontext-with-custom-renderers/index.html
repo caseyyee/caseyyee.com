@@ -25,7 +25,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notes - Casey Yee</title>
+  <title>How to useContext with custom renderers like react-three-fiber and react-konva - Casey Yee</title>
 
   <script>
     (function () {
@@ -41,7 +41,7 @@
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="caseyyee.com">
-  <meta name="twitter:title" content="Notes - Casey Yee">
+  <meta name="twitter:title" content="How to useContext with custom renderers like react-three-fiber and react-konva - Casey Yee">
   <meta name="twitter:creator" content="@whoyee">
   <meta name="twitter:description" content="">
   <meta name="twitter:image" content="https://caseyyee.com/img/casey.jpg">
@@ -132,17 +132,34 @@ https://codepen.io/ibnalkhwarizmi/pen/EremLG
 
   
 <article class="container">
-  <h1>Notes</h1>
-  <h2>Ideas, thoughts and insights about anything</h2>
+  <h1></h1>
+  <h1>How to useContext with custom renderers like react-three-fiber and react-konva</h1>
+<p>Libraries like react-three-fiber and react-konva are fantastic in that they allow React app developers to create 2D and 3D Canvas content while sticking with all that's great about React components. The difference of course, is that rather than manipulating the DOM, they are instead controlling Canvas elements. To achieve this, these libraries implement custom renderers, or reconcilers in React.</p>
+<p>For the most part, these libraries work like any other React libraries, but they both suffer from a React issue that doesn't allow the <code>useContext</code> hook inside the custom reconcilers:</p>
+<iframe
+     src="https://codesandbox.io/embed/react-three-fiber-usecontext-issue-i80wx?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="react-three-fiber useContext issue"
+     allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
+     sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+   ></iframe>
+<p>In the above example, you can see that the <code>&lt;Test&gt;</code> component, properly logs out <em>MyContext</em> value.</p>
+<p>But when moved to be as a child of <code>&lt;Canvas&gt;</code>, which is the react-three-fiber's renderer, we get this lovely error:</p>
+<p><img src="/img/notes/usecontext-error.png" alt="usecontext-error"></p>
+<h2>How do you fix this?</h2>
+<p>You can work around this by avoiding the use of <code>useContext</code> altogether and pass the values you need into the children using props. But this isn't a great solution. The other option is to use a <em>bridge</em> context to proxy the values into a new Context that you can consume inside the renderer:</p>
+<iframe
+     src="https://codesandbox.io/embed/react-three-fiber-usecontext-bridge-p2ftk?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="react-three-fiber useContext bridge"
+     allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
+     sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+   ></iframe>
+<p>It's not the most elegant, but it does work.</p>
+<h2>Additional information</h2>
 <ul>
-<li>
-<p><strong><a href="/notes/react-usecontext-with-custom-renderers">How to useContext with custom renderers like react-three-fiber and react-konva</a></strong>
-<em>April 11, 2020</em></p>
-</li>
-<li>
-<p><strong><a href="/notes/react-ref-collections">Creating a collection of refs with React</a></strong>
-<em>April 10, 2020</em></p>
-</li>
+<li><a href="https://spectrum.chat/react-three-fiber/general/using-usecontext-hook-within-canvas~41e3bc4a-28c2-4318-930c-df8be8d3a014">See my Spectrum chat question</a></li>
+<li><a href="https://github.com/facebook/react/issues/13336#issuecomment-414709155">React Github Issue</a></li>
 </ul>
 
 </article>

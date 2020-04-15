@@ -4,6 +4,10 @@ title: Press - Casey Yee
 heading: Articles, Writing and Mentions
 ---
 
+## Blog
+
+- **[Checkout my Blog section](/blog)**
+
 ## Podcasts
 
 - **[UX and Growth Podcast](https://austinknight.com/)**

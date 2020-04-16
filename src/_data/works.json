@@ -1,5 +1,11 @@
 [
   {
+    "name": "Medoptic",
+    "image": "img/medoptic/vr-apps.gif",
+    "description": "Real-time VR Physician Training.",
+    "link": "/projects/medoptic"
+  },
+  {
     "name": "Firefox Reality",
     "image": "/img/fxr-content.png",
     "description": "Web Browser for mobile VR headsets.",

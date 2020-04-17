@@ -6,40 +6,31 @@ description: 🤘 Click it! … if you want learn a little more about me 👀.
   
     <div class="hero">
       <div class="hero-image">
-        <img src="{{ " /img/casey.jpg" | url }}" alt="Hello! I’m Casey Yee."/>
+        <img src="{{ " /img/casey-1bit.png" | url }}" alt="Hello! I’m Casey Yee."/>
+      </div>
+      <div class="hero-intro">
+        <h1>
+          I'm here<br/>to help!
+        </h1>
+
+        <p>
+        <strong>
+          Let's chat about Product,<br/>Software Dev, AR/VR, <br/>UX &amp; UI and anything Web.
+        </strong>
+        </p>
+
+        <br/>
+
+        {% include "components/social.njk" %}
       </div>
 
-      <div>
-        <h1>Creative<br/>
-          Design&nbsp;+<br/>
-          Code</h1>
-
-        <p>Product Design, Immersive AR/VR UX &amp; UI, Full-stack Web</p>
-
-        <p>On the lookout for creative partners who are excited about making great product as I am.</p>
-
-        <p>Based out of Vancouver, BC</p>
-      </div>
-
-      <div class="hero-menu">
-          <a href="/articles">Blog &amp; Articles</a>
-          <a href="/interests">Even more about me</a>
-          <a href="mailto:caseyyee.ca@gmail.com">Say Hi!</a>  
-
-          <div>
-            <a href="https://twitter.com/whoyee" class="hero-icons" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/whoyee/" class="hero-icons" target="_blank"><i class="fa fa-linkedin"></i></a>
-            <a href="http://github.com/caseyyee" class="hero-icons" target="_blank"><i class="fa fa-github"></i></a>
-          </div>
-      </div>
     </div>
   
 
   <div class="container">
-    <h1 class="align-center">Selected Work</h1>
     {% include "components/works.njk" %}
 
-    <h1 class="align-center">Experiments &amp; Explorations</h1>
+    <h2 class="align-center">Experiments &amp; Explorations</h2>
     {% include "components/experiments.njk" %}
   </div>
 

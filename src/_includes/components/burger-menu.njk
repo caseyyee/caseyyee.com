@@ -25,9 +25,13 @@ https://codepen.io/ibnalkhwarizmi/pen/EremLG
     but, hey, it's pure CSS magic.
     -->
     <ul id="menu" class="align-center">
+      <div class="hero-image">
+        <img src="{{ " /img/casey-1bit.png" | url }}" alt="Hello! I’m Casey Yee."/>
+      </div>
+
       <h1>Hello!</h1>
 
-      <li><a class="bordered bold" href="/">Casey Yee</a></li>
+      <li><a class="bordered" href="/">Home</a></li>
       {% for nav in menu %}
         <li><a class="bordered" href="{{ nav.link }}">{{ nav.name }}</a></li>
       {% endfor %}

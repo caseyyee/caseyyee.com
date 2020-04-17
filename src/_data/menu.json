@@ -1,11 +1,7 @@
 [
   {
-    "name": "Articles",
-    "link": "/articles"
-  },
-  {
     "name": "Blog",
-    "link": "/blog"
+    "link": "/articles"
   },
   {
     "name": "About",

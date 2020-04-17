@@ -38,7 +38,36 @@ _Medoptic mobile app, moderation app and VR client view during training_
 
 _UX Wireframes, product topology and my desk in Tampa HQ_
 
+## Challanges
+
+### User Experience
+
+Surgeons, doctors and educators in the medical training field deal with a lot of complexity. Their environments are cluttered with equipment, strict procedures and challenged with high expectations. Adding any product to this environment is difficult at the best of times, so ensuring that the various touch points for each role was mapped out, and key functions used to operate the system are easy and intuitive was incredibly important.
+
+### Hardware
+
+The challenge was to have training to be as close to an in-person experience as possible, this means having high-resolution cameras and audio equipment in close proximity to the operating area. Supporting equipment such as streaming hardware, touch panel to operate and interact with trainees, connectivity and even thermals of the entire system were all iterated many times over to create a compact, self-contained cart easily moved between clinic, hospitals and training environments.
+
+### VR
+
+We're still in the initial adoption phase for VR technology. Because of this, the usage of these devices is not well understood by users. A large part of designing the system includes training users how to use VR and making it as easy and effortless as possible.
+
+### Performance
+
+Streaming high-resolution video at 6k was a technical challenge, and especially difficult for the mobile headsets to achieve. The VR client built in WebXR achieves 70+fps required to ensure user comfort but also support multiple users at any given time interacting with the host and other users. This is especially important considering that some training can last several hours at a time.
+
+### Other challenges we encountered
+
+- Privacy & Security
+- Regulatory and compliance
+
+![Interface design](/img/medoptic/working.gif)
+
+_Late evenings hacking_
+
 ### Engineering and Engineering Management
+
+My responsibilities:
 
 - Lead role in software engineering and engineering management for key components of product, including infrastructure, services and VR, mobile and desktop VR client applications.
 - Software architecture and data design.
@@ -59,10 +88,11 @@ _Immertec operations_
 
 ### Technologies
 
-- WebXR, WebGL
-- Javascript, React, React Native
+- Javascript, WebXR, WebGL
+- React, React Native
 - Node.js
 - WebRTC
+- Unity
 
 ## Additional information
 

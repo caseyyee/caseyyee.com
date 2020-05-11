@@ -3,48 +3,56 @@
     "name": "Medoptic",
     "image": "img/medoptic/vr-apps.gif",
     "description": "Real-time VR Physician Training.",
-    "link": "/projects/medoptic"
+    "link": "/projects/medoptic",
+    "tech": ["React", "Mobile", "UX", "Product", "three.js"]
   },
   {
     "name": "Firefox Reality",
     "image": "/img/fxr-content.png",
     "description": "Web Browser for mobile VR headsets.",
-    "link": "/projects/firefox-reality"
+    "link": "/projects/firefox-reality",
+    "tech": ["Prototype", "UX", "Product", "API"]
   },
   {
     "name": "WebVR Content Tools",
     "image": "/img/aframe-ui-widgets.gif",
     "description": "Content creation and prototyping tools for WebVR.",
-    "link": "/projects/webvr-tools"
+    "link": "/projects/webvr-tools",
+    "tech": ["Prototype", "C#", "A-Frame", "three.js", "API"]
   },
   {
     "name": "Firefox OS",
     "image": "/img/fxos/fxos-3.jpg",
     "description": "Open-source mobile phone OS made entirely with web technologies.",
-    "link": "/projects/firefox-os"
+    "link": "/projects/firefox-os",
+    "tech": ["UX", "Prototype", "CSS", "Javascript", "API"]
   },
   {
     "name": "Air Jordan 12",
     "image": "/img/aj2012/AJ2012-shoe.jpg",
     "description": "Website for Nike Air Jordan sneakers.",
-    "link": "/projects/aj2012"
+    "link": "/projects/aj2012",
+    "tech": ["UX", "Javascript", "Prototype"]
   },
   {
     "name": "LIDO by Bosa",
     "image": "/img/lido/LIDO4.jpg",
     "description": "State-of-the-art real-estate sales center experience for Bosa Properties.",
-    "link": "/projects/lido"
+    "link": "/projects/lido",
+    "tech": ["UX", "Prototype", "Javascript", "Hardware"]
   },
   {
     "name": "VFS Digital Design",
     "image": "/img/vfs/oomph3.jpg",
     "description": "UX, Web Development, and Physical Computing programs at Vancouver Film School.",
-    "link": "/projects/vfs"
+    "link": "/projects/vfs",
+    "tech": ["Instruction", "Hardware"]
   },
   {
     "name": "Word in Your Hand",
     "image": "/img/wiyh/wiyh-11.jpg",
     "description": "Custom booth experiences for Johnson & Johnson.",
-    "link": "/projects/wiyh"
+    "link": "/projects/wiyh",
+    "tech": ["UX", "Javascript", "Hardware"]
   }
 ]

@@ -6,6 +6,11 @@
       <div class="work-description align-center">
         <h3>{{ work.name }}</h3>
         <p>{{ work.description }}</p>
+        <p>
+          {% for tech in work.tech %}
+          <span class="work-tech">{{ tech }}</span>
+          {% endfor %}
+        </p>
       </div>
     </div>
   </li>

@@ -131,6 +131,11 @@ ul {
   color: var(--black);
 }
 
+.hero-description {
+  width: 72%;
+  margin: auto;
+}
+
 .hero h1 {
   font-size: 5.8rem;
   line-height: 5.4rem;
@@ -353,6 +358,10 @@ article img {
   margin-right: 0;
 }
 
+.menu-page {
+  margin: 0 0.2rem;
+}
+
 .text-decoration-none {
   text-decoration: none;
 }
@@ -371,6 +380,16 @@ article img {
 
 .work-description {
   padding: 0.5rem 0 0 0;
+}
+
+.work-tech {
+  border: 1px solid rgb(160, 160, 160);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+  color: gray;
+  margin: 0.1rem 0.1rem;
+  display: inline-block;
 }
 
 .works img {

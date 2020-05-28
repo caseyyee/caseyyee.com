@@ -6,6 +6,9 @@ heading: Articles, Writing and Mentions
 
 ## Blog
 
+- **[Empire Game - Solo Jam](/blog/empire-game-jam)**
+  _May 28, 2020_
+
 - **[Creating a collection of refs with React](/blog/react-ref-collections)**
   _April 10, 2020_
 

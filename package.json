@@ -4,22 +4,23 @@
   "description": "My piece of the interwebs",
   "main": "docs/index.html",
   "scripts": {
-    "dev": "gulp build & gulp watch & npx eleventy --input=src --output=docs --serve",
-    "build": "gulp build & npx eleventy --input=src --output=docs",
-    "start": "npm run dev"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "author": "Casey Yee",
   "license": "ISC",
-  "devDependencies": {
-    "@11ty/eleventy": "github:11ty/eleventy",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
-    "clean-css": "^4.2.1"
-  },
   "dependencies": {
-    "dependency-tree": "^8.1.2",
-    "gulp": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-order": "^1.2.0",
-    "gulp-uglify": "^3.0.2"
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
+    "@vitejs/plugin-react": "^2.2.0",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.19",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vite": "^3.2.4"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
   }
 }

@@ -4,7 +4,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 
 const sections = ['experience', 'skills', 'contact'];
 
-const imageFolder = '/public/img/';
+const imageFolder = '/img/';
 const experience = [
   {
     company: 'Unity Technologies',

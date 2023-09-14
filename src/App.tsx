@@ -87,13 +87,35 @@ export default () => {
   const [selected, setSelected] = useState<SetStateAction<number | null>>(null);
 
   return (
-    <div className="dark:bg-slate-800 dark:text-white w-5/6 h-full m-auto">
-      <h1 className="uppercase text-lg tracking-wide mt-20 mb-6">Casey Yee</h1>
+    <div className="dark:bg-slate-800 dark:text-white w-5/6 max-w-[100rem] h-full m-auto">
+      <div className="flex mt-20 mb-6">
+        <div className="flex-1">
+          <h1 className="uppercase text-lg tracking-wide ">Casey Yee</h1>
 
-      <p className="text-7xl  tracking-wide">
-        Experienced Engineer, <br />
-        Designer and Problem Solver
-      </p>
+          <p className="text-7xl tracking-wide">
+            Experienced Engineer, <br />
+            Designer and Problem Solver
+          </p>
+        </div>
+
+        <div className="py-10 flex gap-4 justify-self-end">
+          <h2 className="text-neutral-500 text-sm uppercase mb-4">Contact</h2>
+          <ul>
+            <li className="underline decoration-neutral-400">
+              <a href="https://www.linkedin.com/in/whoyee/">LinkedIn</a>
+            </li>
+            <li className="underline decoration-neutral-400">
+              <a href="https://github.com/caseyyee">Github</a>
+            </li>
+            <li className="underline decoration-neutral-400">
+              <a href="http://twitter.com/whoyee">Twitter</a>
+            </li>
+            <li className="underline decoration-neutral-400">
+              <a href="mailto:caseyyee.ca@gmail.com">Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <div className="flex gap-2 my-16">
         {/* {sections.map((section) => (
@@ -154,24 +176,6 @@ export default () => {
             )}
           </>
         ))}
-      </div>
-
-      <div className="py-10 flex gap-4">
-        <h2 className="text-neutral-500 text-sm uppercase mb-4">Contact</h2>
-        <ul>
-          <li className="underline decoration-neutral-400">
-            <a href="https://www.linkedin.com/in/whoyee/">LinkedIn</a>
-          </li>
-          <li className="underline decoration-neutral-400">
-            <a href="https://github.com/caseyyee">Github</a>
-          </li>
-          <li className="underline decoration-neutral-400">
-            <a href="http://twitter.com/whoyee">Twitter</a>
-          </li>
-          <li className="underline decoration-neutral-400">
-            <a href="mailto:caseyyee.ca@gmail.com">Email</a>
-          </li>
-        </ul>
       </div>
     </div>
   );

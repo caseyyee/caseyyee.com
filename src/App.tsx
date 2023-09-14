@@ -79,7 +79,6 @@ const experience = [
     title: 'Co-Founder',
     description: 'Realestate marketing technologies',
     skills: ['Visualization', 'Web', 'Installation'],
-    images: [`${imageFolder}/fxr/fxr-content.png`],
   },
 ];
 
@@ -147,7 +146,7 @@ export default () => {
                 className="text-sm underline decoration-neutral-400 cursor-pointer mt-2"
                 onClick={() => setSelected(selected === index ? null : index)}
               >
-                {selected === index ? '[close]' : '...more'}
+                {selected === index ? '[close]' : job.images?.length && '...more'}
               </div>
             </div>
             <ul>
@@ -163,6 +162,7 @@ export default () => {
             <div className="col-span-3"></div>
             <div className="col-span-3">
               {selected === index &&
+                job.images &&
                 job.images.map((image) =>
                   image.includes('.mp4') ? (
                     <video autoPlay className="w-3/4 my-2" src={image} />

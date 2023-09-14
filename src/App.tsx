@@ -86,7 +86,7 @@ export default () => {
   const [selected, setSelected] = useState<SetStateAction<number | null>>(null);
 
   return (
-    <div className="dark:bg-slate-800 dark:text-white w-5/6 max-w-[100rem] h-full m-auto">
+    <div className="w-5/6 max-w-[100rem] h-full m-auto">
       <div className="flex mt-20 mb-6">
         <div className="flex-1">
           <h1 className="uppercase text-lg tracking-wide ">Casey Yee</h1>

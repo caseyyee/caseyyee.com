@@ -2,8 +2,6 @@ import { createRoot } from 'react-dom/client';
 import React, { SetStateAction, useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 
-const sections = ['experience', 'skills', 'contact'];
-
 const imageFolder = '/img/';
 const experience = [
   {
@@ -86,18 +84,18 @@ export default () => {
   const [selected, setSelected] = useState<SetStateAction<number | null>>(null);
 
   return (
-    <div className="w-5/6 max-w-[100rem] h-full m-auto">
-      <div className="flex mt-20 mb-6">
+    <div className="md:w-5/6 max-w-[100rem] h-full m-auto">
+      <div className="m-6 md:mx-0 md:my-20 lg:flex">
         <div className="flex-1">
-          <h1 className="uppercase text-lg tracking-wide ">Casey Yee</h1>
+          <h1 className="uppercase text-lg tracking-wide mb-4">Casey Yee</h1>
 
-          <p className="text-7xl tracking-wide">
+          <p className="text-5xl md:text-7xl">
             Experienced Engineer, <br />
             Designer and Problem Solver
           </p>
         </div>
 
-        <div className="py-10 flex gap-4 justify-self-end">
+        <div className="mt-6 md:mt-12 flex gap-4 justify-self-end">
           <h2 className="text-neutral-500 text-sm uppercase mb-4">Contact</h2>
           <ul>
             <li className="underline decoration-neutral-400">
@@ -116,32 +114,20 @@ export default () => {
         </div>
       </div>
 
-      <div className="flex gap-2 my-16">
-        {/* {sections.map((section) => (
-          <div className="border-solid border px-6 py-3 border-neutral-200 uppercase text-sm">
-            {section}
-          </div>
-        ))} */}
-      </div>
+      <div className="grid grid-rows md:grid md:grid-cols-[2rem_1fr_1fr_30rem_16rem_10rem] md:gap-4">
+        {['No.', 'Company', 'Title', 'Description', 'Skills', 'Date'].map((header) => (
+          <div className="uppercase text-sm hidden md:block">{header}</div>
+        ))}
 
-      {/* fit-content(theme(spacing.32)) */}
-      <div className="grid grid-cols-[2rem_1fr_1fr_30rem_16rem_10rem] gap-4">
-        <div className="uppercase text-sm">No.</div>
-        <div className="uppercase text-sm">Company</div>
-        <div className="uppercase text-sm">Title</div>
-        <div className="uppercase text-sm">Description</div>
-        <div className="uppercase text-sm">Skills</div>
-        <div className="uppercase text-sm">Date</div>
-        <div className="col-span-6 border-solid border-t border-neutral-200"></div>
+        <div className="md:block md:col-span-6 border-solid border-t border-neutral-200"></div>
 
         {experience.map((job, index) => (
           <>
-            <div className="text-neutral-500 text-sm">{index}</div>
-            <div className="text-neutral-500">{job.company}</div>
-            <div className="text-neutral-400">{job.title}</div>
-            <div className="text-neutral-500">
+            <div className="hidden md:block text-neutral-500 text-sm">{index}</div>
+            <div className="mx-6 mt-6 md:mx-0 md:mt-0 text-neutral-500">{job.company}</div>
+            <div className="mx-6 md:mx-0 md:mt-0 text-neutral-400">{job.title}</div>
+            <div className="mx-6 my-6 md:mx-0 md:mt-0 text-neutral-500">
               {job.description}
-
               <div
                 className="text-sm underline decoration-neutral-400 cursor-pointer mt-2"
                 onClick={() => setSelected(selected === index ? null : index)}
@@ -149,30 +135,36 @@ export default () => {
                 {selected === index ? '[close]' : job.images?.length && '...more'}
               </div>
             </div>
-            <ul>
+            <ul className="mx-6 md:mx-0 md:mt-0">
               {job.skills.map((skill, index) => (
                 <>
-                  <li className="inline bg-neutral-400 text-white m-1 p-2">{skill}</li>
-                  {index % 3 ? <br /> : null}
+                  <li className="text-sm md:text-base inline-block bg-neutral-600 text-white m-[1px] p-2">
+                    {skill}
+                  </li>
                 </>
               ))}
             </ul>
-            <div className="uppercase text-neutral-400 text-sm">{job.date}</div>
-
-            <div className="col-span-3"></div>
-            <div className="col-span-3">
+            <div className="mx-6 my-6 md:mx-0 md:mt-0 uppercase text-neutral-400 text-sm">
+              {job.date}
+            </div>
+            <div className="hidden md:block md:col-span-3">{/* empty */}</div>
+            <div className="md:col-span-3">
               {selected === index &&
                 job.images &&
-                job.images.map((image) =>
-                  image.includes('.mp4') ? (
-                    <video autoPlay className="w-3/4 my-2" src={image} />
+                job.images.map((image) => {
+                  const props = {
+                    className: 'md:w-3/4 my-2 last:my-0',
+                    src: image,
+                  };
+                  return image.includes('.mp4') ? (
+                    <video autoPlay {...props} />
                   ) : (
-                    <img className="w-3/4 my-2" src={image} />
-                  )
-                )}
+                    <img {...props} />
+                  );
+                })}
             </div>
             {index !== experience.length - 1 && (
-              <div className="col-span-6 border-solid border-t border-neutral-200"></div>
+              <div className="md:col-span-6 border-solid border-t border-neutral-200"></div>
             )}
           </>
         ))}

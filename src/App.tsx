@@ -1,6 +1,5 @@
-import { createRoot } from 'react-dom/client';
-import React, { SetStateAction, useRef, useState } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import classnames from 'classnames';
+import React, { SetStateAction, useState } from 'react';
 
 const imageFolder = '/img/';
 const experience = [
@@ -44,9 +43,9 @@ const experience = [
       'webgl',
     ],
     images: [
+      `${imageFolder}/fxr/fxr-sketch.png`,
       `${imageFolder}/fxr/desktop-vr.gif`,
       `${imageFolder}/fxr/fxr-content.png`,
-      `${imageFolder}/fxr/fxr-sketch.png`,
       `${imageFolder}/fxr/rainbow-membrane.jpg`,
     ],
   },
@@ -80,23 +79,25 @@ const experience = [
   },
 ];
 
+const gridStyles =
+  'grid grid-rows lg:grid lg:grid-cols-[1fr_3rem_repeat(2,10rem)_8fr_13rem_10rem_1fr] xl:grid-cols-[1fr_3rem_repeat(2,10rem)_40rem_13rem_10rem_1fr] p-4';
+
 export default () => {
   const [selected, setSelected] = useState<SetStateAction<number | null>>(null);
 
   return (
-    <div className="md:w-5/6 max-w-[100rem] h-full m-auto">
-      <div className="m-6 md:mx-0 md:my-20 lg:flex">
-        <div className="flex-1">
+    <div className="h-full">
+      <div className={classnames(gridStyles)}>
+        <div className="hidden lg:block">{/* left space */}</div>
+        <div className="lg:py-10 lg:col-span-5">
           <h1 className="uppercase text-lg tracking-wide mb-4">Casey Yee</h1>
-
-          <p className="text-5xl md:text-7xl">
+          <p className="text-5xl lg:text-7xl">
             Experienced Engineer, <br />
             Designer and Problem Solver
           </p>
         </div>
-
-        <div className="mt-6 md:mt-12 flex gap-4 justify-self-end">
-          <h2 className="text-neutral-500 text-sm uppercase mb-4">Contact</h2>
+        <div className="my-6 lg:my-[6rem] col-span-1 flex gap-4">
+          <h2 className="text-neutral-500 text-sm uppercase">Contact</h2>
           <ul>
             <li className="underline decoration-neutral-400">
               <a href="https://www.linkedin.com/in/whoyee/">LinkedIn</a>
@@ -112,48 +113,78 @@ export default () => {
             </li>
           </ul>
         </div>
+        <div className="hidden lg:block">{/* right space */}</div>
       </div>
 
-      <div className="grid grid-rows md:grid md:grid-cols-[2rem_1fr_1fr_30rem_16rem_10rem] md:gap-4">
-        {['No.', 'Company', 'Title', 'Description', 'Skills', 'Date'].map((header) => (
-          <div className="uppercase text-sm hidden md:block">{header}</div>
+      <div className={classnames('hidden lg:block', gridStyles)}>
+        {['', 'No.', 'Company', 'Title', 'Description', 'Skills', 'Date', ''].map((header) => (
+          <div className="uppercase text-sm">{header}</div>
         ))}
+      </div>
 
-        <div className="md:block md:col-span-6 border-solid border-t border-neutral-200"></div>
-
-        {experience.map((job, index) => (
-          <>
-            <div className="hidden md:block text-neutral-500 text-sm">{index}</div>
-            <div className="mx-6 mt-6 md:mx-0 md:mt-0 text-neutral-500">{job.company}</div>
-            <div className="mx-6 md:mx-0 md:mt-0 text-neutral-400">{job.title}</div>
-            <div className="mx-6 my-6 md:mx-0 md:mt-0 text-neutral-500">
+      {experience.map((job, index) => {
+        const isSelected = selected === index;
+        return (
+          <div
+            className={classnames(
+              gridStyles,
+              'border-solid border-t border-neutral-200 transition duration-200',
+              {
+                'hover:bg-neutral-100': !isSelected,
+              }
+            )}
+          >
+            <div className="hidden lg:block">{/* left space */}</div>
+            <div className={classnames('hidden lg:block text-neutral-500 text-sm', {})}>
+              {index}
+            </div>
+            <div className={classnames('lg:mx-0 lg:mt-0 text-neutral-500')}>{job.company}</div>
+            <div
+              className={classnames('lg:mx-0 lg:mt-0 text-neutral-400', {
+                'text-neutral-500': isSelected,
+              })}
+            >
+              {job.title}
+            </div>
+            <div className={classnames('my-6 lg:mx-0 lg:mt-0 text-neutral-500', {})}>
               {job.description}
               <div
-                className="text-sm underline decoration-neutral-400 cursor-pointer mt-2"
-                onClick={() => setSelected(selected === index ? null : index)}
+                className="text-sm underline decoration-neutral-400 cursor-pointer mt-2 "
+                onClick={() => setSelected(isSelected ? null : index)}
               >
-                {selected === index ? '[close]' : job.images?.length && '...more'}
+                {isSelected ? '[close]' : job.images?.length && '...more'}
               </div>
             </div>
-            <ul className="mx-6 md:mx-0 md:mt-0">
+            <ul className="lg:mx-0 lg:mt-0">
               {job.skills.map((skill, index) => (
                 <>
-                  <li className="text-sm md:text-base inline-block bg-neutral-600 text-white m-[1px] p-2">
+                  <li
+                    className={classnames(
+                      'text-sm lg:text-base inline-block bg-neutral-600 text-white m-[1px] p-2',
+                      {}
+                    )}
+                  >
                     {skill}
                   </li>
                 </>
               ))}
             </ul>
-            <div className="mx-6 my-6 md:mx-0 md:mt-0 uppercase text-neutral-400 text-sm">
+            <div className="mt-6 lg:mx-0 lg:mt-0 uppercase text-neutral-400 text-sm">
               {job.date}
             </div>
-            <div className="hidden md:block md:col-span-3">{/* empty */}</div>
-            <div className="md:col-span-3">
-              {selected === index &&
+            <div className="hidden lg:block">{/* right space */}</div>
+
+            <div className="hidden lg:block lg:col-span-4">{/* left space */}</div>
+            <div
+              className={classnames('pt-4 lg:col-span-3', {
+                hidden: !isSelected,
+              })}
+            >
+              {isSelected &&
                 job.images &&
                 job.images.map((image) => {
                   const props = {
-                    className: 'md:w-3/4 my-2 last:my-0',
+                    className: 'lg:w-full shadow-lg',
                     src: image,
                   };
                   return image.includes('.mp4') ? (
@@ -163,12 +194,9 @@ export default () => {
                   );
                 })}
             </div>
-            {index !== experience.length - 1 && (
-              <div className="md:col-span-6 border-solid border-t border-neutral-200"></div>
-            )}
-          </>
-        ))}
-      </div>
+          </div>
+        );
+      })}
     </div>
   );
 };

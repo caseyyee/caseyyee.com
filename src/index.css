@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Nunito';
+  src: url('/fonts/Nunito-VariableFont_wght.ttf') format('truetype');
+  font-display: block;
+  font-weight: 100 900;
+}
+
 body,
 html,
 #root {

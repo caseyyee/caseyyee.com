@@ -170,7 +170,7 @@ export default () => {
                 job.images &&
                 job.images.map((image) => {
                   const props = {
-                    className: 'lg:w-full shadow-lg max-w-[800px]',
+                    className: 'lg:w-full shadow-lg lg:max-w-[800px]',
                     src: image,
                   };
                   return image.includes('.mp4') ? (

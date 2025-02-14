@@ -75,6 +75,8 @@ const experience = [
 
 const gridStyles = 'grid grid-rows lg:grid lg:grid-cols-[1fr_250px_250px_4fr_2fr_1fr] gap-4 p-4';
 
+const blogPath = import.meta.env.DEV ? 'http://localhost:5174/posts' : '/posts';
+
 export default () => {
   const [selected, setSelected] = useState<SetStateAction<number | null>>(null);
 
@@ -96,6 +98,19 @@ export default () => {
               <a href="mailto:caseyyee.ca@gmail.com">Email</a>
             </li>
           </ul>
+        </div>
+        <div className="hidden lg:block">{/* right space */}</div>
+      </div>
+
+      <div className={classnames(gridStyles)}>
+        <div className="hidden lg:block">{/* left space */}</div>
+        <div className="lg:col-span-4">
+          <div className="border border-solid border-neutral-200 rounded">
+            <h3>
+              <a href={blogPath + '/getting-started.html'}>Getting Started</a>
+            </h3>
+            <p>Sometimes, you just want to write.</p>
+          </div>
         </div>
         <div className="hidden lg:block">{/* right space */}</div>
       </div>

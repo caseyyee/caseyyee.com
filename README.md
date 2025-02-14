@@ -4,20 +4,11 @@
 
 ### Overview
 
-The site is made with the [Eleventy](https://11ty.io/) static-site generator.
-
-### Local development
-
 ```
-# clone this repo
-git clone git@github.com:caseyyee/caseyyee.com.git
+# posts development
+yarn docs:dev
 
-# go to working directory
-cd caseyyee.com
+# main site development
+yarn dev
 
-# install dependencies
-npm install
-
-# start local server
-npm run start
 ```

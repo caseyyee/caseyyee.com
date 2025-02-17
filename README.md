@@ -2,22 +2,46 @@
 
 ## Served up at [caseyyee.com](https://caseyyee.com)
 
-### Overview
-
-The site is made with the [Eleventy](https://11ty.io/) static-site generator.
-
 ### Local development
 
+run both dev servers at once to see changes to both the main site and the blog
+
 ```
-# clone this repo
-git clone git@github.com:caseyyee/caseyyee.com.git
+# main site development
+yarn dev
 
-# go to working directory
-cd caseyyee.com
+# blog development
+yarn docs:dev
 
-# install dependencies
-npm install
+```
 
-# start local server
-npm run start
+### Folder structure
+
+```
+# main site app
+/src
+
+# blog posts
+/blog/pages
+
+```
+
+### Deployment
+
+Build for deploy
+
+```bash
+yarn build:all
+```
+
+Static site that is deployed to github pages
+
+```bash
+/docs
+```
+
+Github pages domain name configuration
+
+```bash
+/docs/CNAME
 ```

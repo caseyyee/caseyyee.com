@@ -11,8 +11,8 @@
     "blog:dev": "vocs dev --port 5174",
     "blog:build": "vocs build",
     "blog:preview": "vocs preview",
-    "blog:generate": "yarn blog:build && rm -rf ./public/blog && mkdir -p ./public/blog && cp -r ./blog/dist/* ./public/blog/",
-    "build:all": "yarn blog:generate && yarn build"
+    "blog:generate": "yarn blog:build && rm -rf ./docs/blog && mkdir -p ./docs/blog && cp -r ./blog/dist/* ./docs/blog/",
+    "build:all": "yarn build && yarn blog:generate"
   },
   "author": "Casey Yee",
   "license": "ISC",

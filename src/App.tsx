@@ -7,8 +7,16 @@ const experience = [
     company: 'Unity Technologies',
     date: 'Apr 2021 - Present',
     title: 'Senior Engineer',
-    description: 'Parsec, Asset Manager, Product Studio',
-    skills: ['TS', 'React', 'WebGL', 'Unity', 'Devops'],
+    description: (
+      <>
+        <b>Parsec, Unity Asset Manager</b>
+        <br />
+        High performance remote desktop and application streaming.
+        <br />
+        3D Visualization and product configurator tools.
+      </>
+    ),
+    skills: ['TS', 'React', 'WebGL', 'Unity', 'DevOps'],
     images: [
       `${imageFolder}/unity/parsec-website.jpg`,
       `${imageFolder}/unity/parsec-app.jpg`,
@@ -20,7 +28,7 @@ const experience = [
     company: 'VRIFY',
     date: 'Jul 2020 - Apr 2021',
     title: 'Lead Engineer',
-    description: '3D Visualization Platform',
+    description: <>Realtime 3D Visualization and Presentation Platform</>,
     skills: ['Leadership', 'Vue', 'JS', 'WebGL', 'Devops'],
     images: [`${imageFolder}/vrify/vrify.mp4`],
     logo: `${imageFolder}/vrify-logo.png`,

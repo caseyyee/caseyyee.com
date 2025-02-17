@@ -1,7 +1,10 @@
 import classnames from 'classnames';
 import React, { SetStateAction, useState } from 'react';
+import clsx from 'clsx';
+import { ArrowRight } from 'lucide-react';
 
 const imageFolder = '/img/';
+
 const experience = [
   {
     company: 'Unity Technologies',
@@ -94,9 +97,12 @@ export default () => {
     <div className="h-full font-[nunito]">
       <div className={classnames(gridStyles)}>
         <div className="hidden lg:block">{/* left space */}</div>
-        <div className="lg:py-10 lg:col-span-3">
+        <div className="lg:py-7 lg:col-span-3">
           <h1 className="text-lg tracking-wide mb-4">Casey Yee</h1>
-          <p className="text-5xl lg:text-2l">Curious? Me too.</p>
+          <p className="text-5xl leading-snug lg:text-2l">
+            The Everything Engineer. <br />
+            Full-Stack Web, 3D, UX
+          </p>
         </div>
         <div className="my-6 lg:my-[6rem] col-span-1 flex gap-4">
           <h2 className="text-neutral-500 text-sm uppercase">Contact</h2>
@@ -112,13 +118,25 @@ export default () => {
         <div className="hidden lg:block">{/* right space */}</div>
       </div>
 
-      <div className={classnames(gridStyles)}>
+      <div className={clsx(classnames(gridStyles), 'mb-10')}>
         <div className="hidden lg:block">{/* left space */}</div>
         <div className="lg:col-span-4">
-          <h2>Blog</h2>
-          <ul>
-            <li>
-              <a href={`${blogPath}/blog`}>See all articles</a>
+          <ul className="grid lg:grid-cols-3 gap-4">
+            <li className="border border-neutral-200 pb-4 rounded px-6 py-4">
+              <a href={`${blogPath}/blog/what-im-into`}>
+                <h3 className="text-2xl font-bold mb-4 hover:underline">2025 Web Stack</h3>
+                <p className="text-neutral-500">
+                  We don't always get to make our own tech stack choices. But if I'm starting today,
+                  this is where i'd start.
+                </p>
+                <button className="flex justify-end gap-1 w-full mt-2">
+                  <a href={`${blogPath}/blog/what-im-into`} className="text-sm hover:underline">
+                    Read
+                  </a>
+
+                  <ArrowRight size={16} className="text-neutral-400" />
+                </button>
+              </a>
             </li>
           </ul>
         </div>

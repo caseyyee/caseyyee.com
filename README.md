@@ -11,7 +11,7 @@ run both dev servers at once to see changes to both the main site and the blog
 yarn dev
 
 # blog development
-yarn docs:dev
+yarn blog:dev
 
 ```
 

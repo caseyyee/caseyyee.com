@@ -5,4 +5,9 @@ export default defineConfig({
   title: 'Casey Yee',
   rootDir: 'blog',
   basePath: '/blog',
+  topNav: [
+    { text: 'caseyyee.com', link: '/' },
+    { text: 'LinkedIn', link: 'https://www.linkedin.com/in/whoyee' },
+    { text: 'Email', link: 'mailto:caseyyee.ca@gmail.com' },
+  ],
 });

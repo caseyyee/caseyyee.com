@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import React, { SetStateAction, useState } from 'react';
 import clsx from 'clsx';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Linkedin, Mail } from 'lucide-react';
 
 const imageFolder = '/img/';
 
@@ -98,7 +98,7 @@ export default () => {
       <div className={classnames(gridStyles)}>
         <div className="hidden lg:block">{/* left space */}</div>
         <div className="lg:py-7 lg:col-span-3">
-          <h1 className="text-lg tracking-wide mb-4">Casey Yee</h1>
+          <h1 className="text-lg tracking-wide mb-4 font-bold">Casey Yee</h1>
           <p className="text-5xl leading-snug lg:text-2l">
             The Everything Engineer. <br />
             Full-Stack Web, 3D, UX
@@ -107,10 +107,12 @@ export default () => {
         <div className="my-6 lg:my-[6rem] col-span-1 flex gap-4">
           <h2 className="text-neutral-500 text-sm uppercase">Contact</h2>
           <ul>
-            <li className="underline decoration-neutral-400">
+            <li className="underline decoration-neutral-400 flex gap-2 items-center">
+              <Linkedin size={16} fill="black" strokeWidth={0} />
               <a href="https://www.linkedin.com/in/whoyee/">LinkedIn</a>
             </li>
-            <li className="underline decoration-neutral-400">
+            <li className="underline decoration-neutral-400 flex gap-2 items-center">
+              <Mail size={16} />
               <a href="mailto:caseyyee.ca@gmail.com">Email</a>
             </li>
           </ul>
@@ -139,6 +141,14 @@ export default () => {
               </a>
             </li>
           </ul>
+        </div>
+        <div className="hidden lg:block">{/* right space */}</div>
+      </div>
+
+      <div className={clsx(classnames(gridStyles))}>
+        <div className="hidden lg:block">{/* left space */}</div>
+        <div className="lg:col-span-4">
+          <h2 className="text-xl font-bold">Experience</h2>
         </div>
         <div className="hidden lg:block">{/* right space */}</div>
       </div>

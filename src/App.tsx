@@ -136,8 +136,9 @@ export default () => {
   const [selected, setSelected] = useState<SetStateAction<number | null>>(null);
 
   return (
-    <div className="h-full font-[nunito]">
-      <SectionContainer>
+    <div className="h-full font-[nunito] m-0 p-0">
+      <div className={clsx(gridStyles)}>
+        <div className="hidden lg:block">{/* left space */}</div>
         <div className="lg:py-7 lg:col-span-3">
           <h1 className="text-lg tracking-wide mb-4 font-bold">Casey Yee</h1>
           <p className="text-5xl leading-tight lg:leading-snug lg:text-2l">
@@ -159,7 +160,8 @@ export default () => {
             </li>
           </ul>
         </div>
-      </SectionContainer>
+        <div className="hidden lg:block">{/* right space */}</div>
+      </div>
 
       <SectionContainer>
         <div className="lg:col-span-4">
@@ -206,7 +208,7 @@ export default () => {
             key={`exp-${index}`}
             className={clsx(
               gridStyles,
-              'border-solid border-t border-neutral-200 transition duration-200 hover:bg-neutral-100',
+              'border-solid border-t border-neutral-200 transition duration-300 hover:bg-neutral-100',
               {
                 'bg-neutral-100': isSelected,
               }

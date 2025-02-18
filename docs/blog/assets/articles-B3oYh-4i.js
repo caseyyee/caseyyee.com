@@ -1,4 +1,4 @@
-import{u as i,j as e}from"./index-BZKcJXM6.js";const a={title:"Articles, Writing and Mentions",layout:"minimal"};function r(s){const n={a:"a",div:"div",em:"em",h2:"h2",li:"li",p:"p",strong:"strong",ul:"ul",...i(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsxs(n.h2,{id:"podcasts",children:["Podcasts",e.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#podcasts",children:e.jsx(n.div,{"data-autolink-icon":!0})})]}),`
+import{u as i,j as e}from"./index-TEOaOHai.js";const a={title:"Articles, Writing and Mentions",layout:"minimal"};function r(s){const n={a:"a",div:"div",em:"em",h2:"h2",li:"li",p:"p",strong:"strong",ul:"ul",...i(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsxs(n.h2,{id:"podcasts",children:["Podcasts",e.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#podcasts",children:e.jsx(n.div,{"data-autolink-icon":!0})})]}),`
 `,e.jsxs(n.ul,{children:[`
 `,e.jsxs(n.li,{children:[`
 `,e.jsx(n.strong,{children:e.jsx(n.a,{href:"https://austinknight.com/",children:"UX and Growth Podcast"})}),`

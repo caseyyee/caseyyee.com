@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import React, { SetStateAction, useState } from 'react';
 import clsx from 'clsx';
-import { ArrowRight, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Linkedin, Mail, Plus, Minus } from 'lucide-react';
 
 const imageFolder = '/img/';
 
@@ -31,7 +31,7 @@ const experience = [
     company: 'VRIFY',
     date: 'Jul 2020 - Apr 2021',
     title: 'Lead Engineer',
-    description: <>Realtime 3D Visualization and Presentation Platform</>,
+    description: <>Multi-user, Realtime 3D Visualization and Presentation Platform</>,
     skills: ['Leadership', 'Vue', 'JS', 'WebGL', 'Devops'],
     images: [`${imageFolder}/vrify/vrify.mp4`],
     logo: `${imageFolder}/vrify-logo.png`,
@@ -41,6 +41,12 @@ const experience = [
     date: 'Aug 2019 - Apr 2020',
     title: 'Lead Engineer',
     description: 'VR Surgical Training Platform',
+    links: [
+      {
+        label: 'More about Medoptic',
+        href: '/blog/medoptic',
+      },
+    ],
     skills: ['Leadership', 'React', 'WebGL', 'Devops', 'ReactNative'],
     images: [`${imageFolder}/medoptic/vr-apps.gif`],
     logo: `${imageFolder}/immertec-logo.jpeg`,
@@ -49,13 +55,27 @@ const experience = [
     company: 'Mozilla',
     date: 'Aug 2014 - Mar 2019',
     title: 'UX Engineer',
-    description: 'Firefox Reality VR Web Browser, WebXR, Firefox OS',
+    description: 'Firefox Reality XR Web Browser, WebXR, Firefox OS',
+    links: [
+      {
+        label: 'Firefox Reality Browser',
+        href: '/blog/firefox-reality',
+      },
+      {
+        label: 'WebXR Content Tools',
+        href: '/blog/webxr',
+      },
+      {
+        label: 'Firefox OS',
+        href: '/blog/firefox-os',
+      },
+    ],
     skills: ['JS', 'Open Source', 'UX', 'WebGL', 'C#', 'Unity', 'Devrel'],
     images: [
       `${imageFolder}/fxr/fxr-sketch.png`,
-      `${imageFolder}/fxr/desktop-vr.gif`,
+      `${imageFolder}/aframe/aframe.gif`,
       `${imageFolder}/fxr/fxr-content.png`,
-      `${imageFolder}/fxr/rainbow-membrane.jpg`,
+      `${imageFolder}/fxos/fxos-2.jpg`,
     ],
     logo: `${imageFolder}/mozilla-logo.png`,
   },
@@ -84,7 +104,8 @@ const experience = [
   },
 ];
 
-const gridStyles = 'grid grid-rows lg:grid lg:grid-cols-[1fr_250px_250px_4fr_2fr_1fr] gap-4 p-4';
+const gridStyles =
+  'grid grid-rows lg:grid lg:grid-cols-[1fr_250px_250px_4fr_2fr_1fr] gap-y-6 lg:gap-y-0 lg:gap-x-4 px-4 py-8';
 
 const isDev = import.meta.env.DEV;
 
@@ -99,7 +120,7 @@ export default () => {
         <div className="hidden lg:block">{/* left space */}</div>
         <div className="lg:py-7 lg:col-span-3">
           <h1 className="text-lg tracking-wide mb-4 font-bold">Casey Yee</h1>
-          <p className="text-5xl leading-snug lg:text-2l">
+          <p className="text-5xl leading-tight lg:leading-snug lg:text-2l">
             The Everything Engineer. <br />
             Full-Stack Web, 3D, UX
           </p>
@@ -120,23 +141,21 @@ export default () => {
         <div className="hidden lg:block">{/* right space */}</div>
       </div>
 
-      <div className={clsx(classnames(gridStyles), 'mb-10')}>
+      <div className={clsx(classnames(gridStyles), 'mb-4')}>
         <div className="hidden lg:block">{/* left space */}</div>
         <div className="lg:col-span-4">
           <ul className="grid lg:grid-cols-3 gap-4">
-            <li className="border border-neutral-200 pb-4 rounded px-6 py-4">
-              <a href={`${blogPath}/blog/what-im-into`}>
-                <h3 className="text-2xl font-bold mb-4 hover:underline">2025 Web Stack</h3>
+            <li className="pb-4 rounded-lg p-6 border border-neutral-200 shadow-lg">
+              <a href={`${blogPath}/blog/2025-web-app-stack`}>
+                <h3 className="text-2xl font-bold mb-4 hover:underline">2025 Web Stack 🥞</h3>
                 <p className="text-neutral-500">
-                  We don't always get to make our own tech stack choices. But if I'm starting today,
-                  this is where i'd start.
+                  What's worked well for me? The stack I would choose when starting my next project.
                 </p>
-                <button className="flex justify-end gap-1 w-full mt-2">
-                  <a href={`${blogPath}/blog/what-im-into`} className="text-sm hover:underline">
-                    Read
-                  </a>
 
-                  <ArrowRight size={16} className="text-neutral-400" />
+                <button className=" mt-4 flex justify-center items-center text-sm gap-1 px-3 py-1 rounded-lg transition-colors transition-duration-300 border border-neutral-200 bg-white hover:bg-gradient-to-r hover:from-amber-500 hover:to-pink-500 hover:text-white cursor-pointer">
+                  <a href={`${blogPath}/blog/2025-web-app-stack`}>Read</a>
+
+                  <ArrowRight size={16} />
                 </button>
               </a>
             </li>
@@ -160,9 +179,9 @@ export default () => {
             key={`exp-${index}`}
             className={classnames(
               gridStyles,
-              'border-solid border-t border-neutral-200 transition duration-200',
+              'border-solid border-t border-neutral-200 transition duration-200 hover:bg-neutral-100',
               {
-                'hover:bg-neutral-100': !isSelected,
+                'bg-neutral-100': isSelected,
               }
             )}
           >
@@ -189,14 +208,35 @@ export default () => {
             >
               {job.title}
             </div>
-            <div className={classnames('my-6 lg:mx-0 lg:mt-0 text-neutral-500', {})}>
+            <div
+              className={classnames('lg:mx-0 lg:mt-0 text-neutral-500 order-last lg:order-none')}
+            >
               {job.description}
-              <div
-                className="text-sm underline decoration-neutral-400 cursor-pointer mt-2 "
+
+              <button
+                className={clsx(
+                  'text-sm cursor-pointer block text-neutral-800 px-3 py-1 rounded-lg transition-colors transition-duration-300 border border-neutral-200 bg-white mt-4',
+                  {
+                    'hover:bg-gradient-to-r hover:from-amber-500 hover:to-pink-500 hover:text-white':
+                      !isSelected,
+                  }
+                )}
                 onClick={() => setSelected(isSelected ? null : index)}
               >
-                {isSelected ? '[close]' : job.images?.length && '...more'}
-              </div>
+                <div className="flex gap-2 items-center">
+                  {isSelected ? (
+                    <>
+                      <span>Close</span> <Minus size={16} />
+                    </>
+                  ) : (
+                    job.images?.length && (
+                      <>
+                        <span>More</span> <Plus size={16} />
+                      </>
+                    )
+                  )}
+                </div>
+              </button>
             </div>
             <ul className="lg:mx-0 lg:mt-0">
               {job.skills.map((skill, index) => (
@@ -232,6 +272,25 @@ export default () => {
                     <img {...props} />
                   );
                 })}
+
+              {job.links?.length && (
+                <ul className="mt-4 mb-4 flex items-start flex-col gap-2">
+                  {job.links?.map((link, index) => (
+                    <li
+                      key={`link-${index}`}
+                      className="flex gap-2 items-center justify-center rounded-lg py-1 px-3 bg-gradient-to-r from-amber-500 to-pink-500  shadow-lg text-white whitespace-nowrap"
+                    >
+                      <a
+                        href={blogPath + link.href}
+                        className={classnames('hover:underline drop-shadow cursor-pointer')}
+                      >
+                        {link.label}
+                      </a>
+                      <ArrowRight size={16} className="text-white" />
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
         );

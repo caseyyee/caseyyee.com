@@ -1,0 +1,3 @@
+/* this is for blog, main app css in /src/index.css */
+@layer vocs_preflight;
+@import "tailwindcss";

@@ -153,7 +153,7 @@ export default () => {
                 </p>
 
                 <button className=" mt-4 flex justify-center items-center text-sm gap-1 px-3 py-1 rounded-lg transition-colors transition-duration-300 border border-neutral-200 bg-white hover:bg-gradient-to-r hover:from-amber-500 hover:to-pink-500 hover:text-white cursor-pointer">
-                  <a href={`${blogPath}/blog/2025-web-app-stack`}>Read</a>
+                  <span>Read</span>
 
                   <ArrowRight size={16} />
                 </button>

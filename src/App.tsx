@@ -1,7 +1,7 @@
-import classnames from 'classnames';
 import React, { SetStateAction, useState } from 'react';
 import clsx from 'clsx';
 import { ArrowRight, Linkedin, Mail, Plus, Minus } from 'lucide-react';
+import SectionContainer from './components/SectionContainer';
 
 const imageFolder = '/img/';
 
@@ -104,8 +104,29 @@ const experience = [
   },
 ];
 
-const gridStyles =
-  'grid grid-rows lg:grid lg:grid-cols-[1fr_250px_250px_4fr_2fr_1fr] gap-y-6 lg:gap-y-0 lg:gap-x-4 px-4 py-8';
+const articles = [
+  {
+    title: '2025 Web Stack 🥞',
+    description:
+      'What helped me move faster, more efficiently, and ship higher quality products in the last year. Here is the tech and patterns I would choose when starting my next project.',
+    href: '/blog/2025-web-app-stack',
+  },
+  // {
+  //   title: 'Software Development in the Age of AI',
+  //   description:
+  //     "How I'm choosing to navigate my way through learing and applying new AI technologies to my work.",
+  //   href: '/blog/software-development-in-the-age-of-ai',
+  // },
+  // {
+  //   title: 'Ship Value, Not Tech',
+  //   description:
+  //     'Fight to work on what is important. How to make an impact and deliver business value.',
+  //   href: '/blog/2025-web-app-stack',
+  // },
+];
+
+export const gridStyles =
+  'grid grid-rows lg:grid lg:grid-cols-[1fr_250px_250px_4fr_2fr_1fr] gap-y-6 lg:gap-y-0 lg:gap-x-4 px-4 py-6';
 
 const isDev = import.meta.env.DEV;
 
@@ -116,14 +137,14 @@ export default () => {
 
   return (
     <div className="h-full font-[nunito]">
-      <div className={classnames(gridStyles)}>
-        <div className="hidden lg:block">{/* left space */}</div>
+      <SectionContainer>
         <div className="lg:py-7 lg:col-span-3">
           <h1 className="text-lg tracking-wide mb-4 font-bold">Casey Yee</h1>
           <p className="text-5xl leading-tight lg:leading-snug lg:text-2l">
             The Everything Engineer. <br />
             Full-Stack Web, 3D, UX
           </p>
+          <p className="mt-5 leading-tight lg:leading-snug lg:text-2l">Vancouver, BC, Canada</p>
         </div>
         <div className="my-6 lg:my-[6rem] col-span-1 flex gap-4">
           <h2 className="text-neutral-500 text-sm uppercase">Contact</h2>
@@ -138,46 +159,52 @@ export default () => {
             </li>
           </ul>
         </div>
-        <div className="hidden lg:block">{/* right space */}</div>
-      </div>
+      </SectionContainer>
 
-      <div className={clsx(classnames(gridStyles), 'mb-4')}>
-        <div className="hidden lg:block">{/* left space */}</div>
+      <SectionContainer>
+        <div className="lg:col-span-4">
+          <h2 className="text-xl font-bold">Field Notes</h2>
+        </div>
+      </SectionContainer>
+
+      <SectionContainer>
         <div className="lg:col-span-4">
           <ul className="grid lg:grid-cols-3 gap-4">
-            <li className="pb-4 rounded-lg p-6 border border-neutral-200 shadow-lg">
-              <a href={`${blogPath}/blog/2025-web-app-stack`}>
-                <h3 className="text-2xl font-bold mb-4 hover:underline">2025 Web Stack 🥞</h3>
-                <p className="text-neutral-500">
-                  What's worked well for me? The stack I would choose when starting my next project.
-                </p>
+            {articles.map((article, index) => (
+              <li
+                key={`article-${index}`}
+                className="rounded-lg p-6 border border-neutral-200 shadow-lg"
+              >
+                <a href={`${blogPath}/blog/2025-web-app-stack`} className="flex flex-col">
+                  <h3 className="text-2xl font-bold mb-4 hover:underline">{article.title}</h3>
 
-                <button className=" mt-4 flex justify-center items-center text-sm gap-1 px-3 py-1 rounded-lg transition-colors transition-duration-300 border border-neutral-200 bg-white hover:bg-gradient-to-r hover:from-amber-500 hover:to-pink-500 hover:text-white cursor-pointer">
-                  <span>Read</span>
+                  <p className="text-neutral-500">{article.description}</p>
 
-                  <ArrowRight size={16} />
-                </button>
-              </a>
-            </li>
+                  <div className="mt-4">
+                    <button className="flex items-center text-sm gap-1 px-3 py-1 rounded-lg transition-colors transition-duration-300 border border-neutral-200 bg-white hover:bg-gradient-to-r hover:from-amber-500 hover:to-pink-500 hover:text-white cursor-pointer">
+                      <span>Read</span>
+                      <ArrowRight size={16} />
+                    </button>
+                  </div>
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
-        <div className="hidden lg:block">{/* right space */}</div>
-      </div>
+      </SectionContainer>
 
-      <div className={clsx(classnames(gridStyles))}>
-        <div className="hidden lg:block">{/* left space */}</div>
+      <SectionContainer>
         <div className="lg:col-span-4">
-          <h2 className="text-xl font-bold">Experience</h2>
+          <h2 className="text-xl font-bold">Work Timeline</h2>
         </div>
-        <div className="hidden lg:block">{/* right space */}</div>
-      </div>
+      </SectionContainer>
 
       {experience.map((job, index) => {
         const isSelected = selected === index;
         return (
           <div
             key={`exp-${index}`}
-            className={classnames(
+            className={clsx(
               gridStyles,
               'border-solid border-t border-neutral-200 transition duration-200 hover:bg-neutral-100',
               {
@@ -186,7 +213,7 @@ export default () => {
             )}
           >
             <div className="hidden lg:block">{/* left space */}</div>
-            <div className={classnames('lg:mx-0 lg:mt-0 text-neutral-500')}>
+            <div className={clsx('lg:mx-0 lg:mt-0 text-neutral-500')}>
               <div className="grid grid-cols-[2.5rem_1fr] gap-4">
                 <div className="grid place-items-center">
                   <img
@@ -202,15 +229,13 @@ export default () => {
               </div>
             </div>
             <div
-              className={classnames('lg:mx-0 lg:mt-0 text-neutral-400', {
+              className={clsx('lg:mx-0 lg:mt-0 text-neutral-400', {
                 'text-neutral-500': isSelected,
               })}
             >
               {job.title}
             </div>
-            <div
-              className={classnames('lg:mx-0 lg:mt-0 text-neutral-500 order-last lg:order-none')}
-            >
+            <div className={clsx('lg:mx-0 lg:mt-0 text-neutral-500 order-last lg:order-none')}>
               {job.description}
 
               <button
@@ -242,7 +267,7 @@ export default () => {
               {job.skills.map((skill, index) => (
                 <li
                   key={`skill-${index}`}
-                  className={classnames(
+                  className={clsx(
                     'text-xs inline-block bg-neutral-600 text-white m-[1px] px-2 py-1 whitespace-nowrap uppercase rounded',
                     {}
                   )}
@@ -255,7 +280,7 @@ export default () => {
 
             <div className="hidden lg:block lg:col-span-3">{/* left space */}</div>
             <div
-              className={classnames('pt-4 lg:col-span-2', {
+              className={clsx('pt-4 lg:col-span-2', {
                 hidden: !isSelected,
               })}
             >
@@ -263,7 +288,7 @@ export default () => {
                 job.images &&
                 job.images.map((image) => {
                   const props = {
-                    className: 'lg:w-full shadow-lg lg:max-w-[800px]',
+                    className: 'lg:w-full shadow-lg lg:max-w-[800px] rounded my-2',
                     src: image,
                   };
                   return image.includes('.mp4') ? (
@@ -282,7 +307,7 @@ export default () => {
                     >
                       <a
                         href={blogPath + link.href}
-                        className={classnames('hover:underline drop-shadow cursor-pointer')}
+                        className={clsx('hover:underline drop-shadow cursor-pointer')}
                       >
                         {link.label}
                       </a>

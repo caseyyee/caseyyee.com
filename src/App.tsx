@@ -146,6 +146,8 @@ export default () => {
             autoPlay
             muted
             loop
+            {...{ 'webkit-playsinline': 'true' }}
+            playsInline={true}
             className="w-full h-full object-cover opacity-60 relative lg:left-16 brightness-150"
           >
             <source src={`${videoFolder}/snapshot.mov`} type="video/mp4" />
@@ -162,7 +164,7 @@ export default () => {
             <br />
             Full-Stack Web, 3D, UX
           </p>
-          <p className="mt-5 text-2xl leading-tight lg:leading-snug lg:text-2l w-3/4">
+          <p className="mt-5 text-2xl leading-tight lg:leading-snug lg:text-2l w-3/4 text-neutral-500">
             I Have Worked on Browsers, Operating Systems and Shipped Apps at Scale. Now and Always
             Looking for a Good Challenge.
           </p>

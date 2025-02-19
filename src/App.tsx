@@ -2,8 +2,10 @@ import React, { SetStateAction, useState } from 'react';
 import clsx from 'clsx';
 import { ArrowRight, Linkedin, Mail, Plus, Minus } from 'lucide-react';
 import SectionContainer from './components/SectionContainer';
+import Zipper from './components/Zipper';
 
 const imageFolder = '/img/';
+const videoFolder = '/vids/';
 
 const experience = [
   {
@@ -137,15 +139,33 @@ export default () => {
 
   return (
     <div className="h-full font-[nunito] m-0 p-0">
+      <Zipper />
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="bg-gradient-to-r from-amber-500 to-pink-500 absolute -right-12 -top-10 lg:top-16 lg:-left-24 w-48 h-48 -z-1 rounded-full overflow-hidden">
+          <video
+            autoPlay
+            muted
+            loop
+            className="w-full h-full object-cover opacity-60 relative lg:left-16 brightness-150"
+          >
+            <source src={`${videoFolder}/snapshot.mov`} type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
       <div className={clsx(gridStyles)}>
         <div className="hidden lg:block">{/* left space */}</div>
         <div className="lg:py-7 lg:col-span-3">
-          <h1 className="text-lg tracking-wide mb-4 font-bold">Casey Yee</h1>
-          <p className="text-5xl leading-tight lg:leading-snug lg:text-2l">
-            The Everything Engineer. <br />
+          <h1 className="text-lg tracking-wide mb-4 font-bold ">Casey Yee</h1>
+          <p className="text-5xl leading-tight lg:leading-snug">
+            Everything Engineer
+            <br />
             Full-Stack Web, 3D, UX
           </p>
-          <p className="mt-5 leading-tight lg:leading-snug lg:text-2l">Vancouver, BC, Canada</p>
+          <p className="mt-5 text-2xl leading-tight lg:leading-snug lg:text-2l w-3/4">
+            I Have Worked on Browsers, Operating Systems and Shipped Apps at Scale. Now and Always
+            Looking for a Good Challenge.
+          </p>
         </div>
         <div className="my-6 lg:my-[6rem] col-span-1 flex gap-4">
           <h2 className="text-neutral-500 text-sm uppercase">Contact</h2>
@@ -165,17 +185,11 @@ export default () => {
 
       <SectionContainer>
         <div className="lg:col-span-4">
-          <h2 className="text-xl font-bold">Field Notes</h2>
-        </div>
-      </SectionContainer>
-
-      <SectionContainer>
-        <div className="lg:col-span-4">
-          <ul className="grid lg:grid-cols-3 gap-4">
+          <ul className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {articles.map((article, index) => (
               <li
                 key={`article-${index}`}
-                className="rounded-lg p-6 border border-neutral-200 shadow-lg"
+                className="rounded-lg p-6 border border-neutral-200 shadow-lg bg-white"
               >
                 <a href={`${blogPath}/blog/2025-web-app-stack`} className="flex flex-col">
                   <h3 className="text-2xl font-bold mb-4 hover:underline">{article.title}</h3>

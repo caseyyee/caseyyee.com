@@ -109,10 +109,14 @@ const experience = [
 const articles = [
   {
     title: '2025 Web Stack 🥞',
-    description:
-      'What helped me move faster, more efficiently, and ship higher quality products in the last year. Here is the tech and patterns I would choose when starting my next project.',
+    description: `Libraries and Patterns I've Enjoyed Using. What I'm Choosing When Starting My Next Project.`,
     href: '/blog/2025-web-app-stack',
   },
+  // {
+  //   title: 'Experimenting with WebLLM',
+  //   description: 'Running Large Language Models Directly in the Browser',
+  //   href: '/experimenting-webllm',
+  // },
   // {
   //   title: 'Software Development in the Age of AI',
   //   description:

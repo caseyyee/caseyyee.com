@@ -9,32 +9,34 @@ import katamari from '../img/web-stack/katamari.jpg';
 
 # 2025 Web Stack 🥞
 
-## What helped me move faster, more efficiently, and ship higher quality products in the last year. Here is the tech and patterns I would choose when starting my next project.
+## OK, let's hear it. What do you like?
 
 <img src={katamari} alt="katamari" />
 
-This is a work in progress. I plan on updating from time to time.
+This is a work in progress. I'll add to it as I go.
 
 May contain hot-takes.
 
 ## Front-end frameworks
 
-Zero-to-hero with no fuss and fast? Go with Vite. For more complex apps, Server rendering, Route and API handling, Next.js is hard to beat.
+No fuss, fast option is Vite. Great for quick prototypes and testing ideas. I'd like to try Astro for its ability to generate SEO friendly, easy to host static sites. For everything else, next.js has a lot of nice features. Server rendering, API routes are nice.
 
 - [React](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
 - [Next.js](https://nextjs.org/)
+- [Astro](https://astro.build/)
 
 ## State Management
 
-Keeping it simple with queryStrings, useState and React Context is still my preferred approach. For more complex or larger state, I'd look to Xstate and Zustand.
+Store state in QueryString for anything that you want to survive a refresh or share as a link.
+React useState, Context and useReducer is my goto. But using these can potentially lead to a lot of headaches with when things get more complex. Xstate is great for state machines. Zustand for everything else.
 
 - [Xstate](https://xstate.js.org/)
 - [Zustand](https://zustand.docs.pmnd.rs/)
 
 ## Styling & Motion
 
-Tailwind makes every other styles system feel slow and clumsy. For more sophisicated animation, Framer Motion is where it's at. For ultimate control, GSAP is OG but goody. styled-components can eat my shorts.
+Tailwind makes every other styles system feel slow and clumsy. For more sophisicated animation, Framer Motion is where it's at. For ultimate control, GSAP is OG and good. styled-components can eat my shorts.
 
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Lucide Icons](https://lucide.dev/icons/)
@@ -79,11 +81,11 @@ Sentry has saved my bacon more than once.
 
 ## Cross-platform Native
 
+Honestly react-native development is kind of a pain. But would you rather learn Swift? Ya, maybe one day.
+
 - [Expo](https://expo.dev/)
 
 ## Code Form
-
-### Tabs or spaces
 
 2 spaces, no tabs.
 

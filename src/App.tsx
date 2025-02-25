@@ -203,7 +203,7 @@ export default () => {
                   <p className="text-neutral-500">{article.description}</p>
 
                   <div className="mt-4">
-                    <button className="flex items-center text-sm gap-1 px-3 py-1 rounded-lg transition-colors transition-duration-300 border border-neutral-200 bg-white hover:bg-gradient-to-r hover:from-amber-500 hover:to-pink-500 hover:text-white cursor-pointer">
+                    <button className="flex items-center text-sm gap-1 px-3 py-1 rounded-lg transition-colors transition-duration-300 text-white  bg-black hover:bg-gradient-to-r hover:from-amber-500 hover:to-pink-500  cursor-pointer">
                       <span>Read</span>
                       <ArrowRight size={16} />
                     </button>

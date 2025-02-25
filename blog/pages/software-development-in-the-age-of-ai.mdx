@@ -1,39 +1,41 @@
 ---
 layout: minimal
-title: Software Development in the Age of AI
-description: How I'm choosing to navigate my way through learing and applying new AI technologies to my work.
+title: The Road to AI
+description: How I'm navigate my way through learing and applying new AI technologies to my work.
 date: 2025-02-18
 showSidebar: false
 ---
 
-# Hypetrain
+# Exploration
 
-If like many of you, when i looked at getting into AI, i was overwhelmed by how different working with it was than what i was used to in web development land. In a way, it feels like i completely slept on it, and when i finally looked, things have progressed so much, that i felt a certain panic. What is all this python code? Is there any chance of keeping up? So much maths. It just feels like a completely different world to me.
+This is a fast moving space. Just writing down all my notes as I go.
 
-I will never be able to work on the frontier, those brains are too big for me. Also seems like the domain of big companies that can afford the compute for training.
+### Coding
 
-Feeling like falling behind is real. Everyone seems to be integrating ai into their products, and endless amount of cruft on social media of accounts of new services being born what feels like every hour. The pace is relentless.
+- [Cursor](https://www.cursor.com/)
 
-But as time has gone by, just taking the time to understand the landscape a bit has helped me understand, that we're still early in this.
+  - .cursor/rules
 
-# Incorporating AI into your development workflow
+- Run LLMs locally
+  - [Ollama](https://ollama.com/library/deepseek-r1)
 
-whats worked well:
-Chatbots are the obvious starting point. They are everywhere and in their most basic form can be extremely helpful in your day to day. Some of the ways i've found them useful in my workflow are:
+## Running LLM locally
 
-- Looking up API usage
-- Ideas on approachees for solving code problems
+Running the Deepseek R1 model, 8b parameters. Performs OK on my M2 air. Good enough for small experiments. Would really like to look at other "offline" options that don't depend on services. I think future functionality using small LLM's on mobile devices or inside the browser might be an interesting space for offline cases, low power devices, or in situations where you want privacy, autonomy or security.
 
-What i've found that even this basic level of usage has made me a much more efficient developer. Rather than getting stuck for days on a problem, I can usually get them figured out in a few hours. Lower frustration, higher productivity, and generally more enjoyable.
+- [WebLLM](https://webllm.mlc.ai/)
+- [LM Studio](https://lmstudio.ai/)
 
-What its not good at:
+## Agents
 
-Helucinations are real. Lots of just plain wrong answers. Mostly in the form of API functions that don't exist.
+- [Goose AI agent](https://gooseai.com/)
 
-Cursor
+- [Vercel AI SDK](https://sdk.vercel.ai/)
 
-# Beyond the chatbot
+  - Ability to quickly create web. Multi-model capabilities.
 
-Download and running models locally ollama
+- [Model context Protocol - Anthropic](https://github.com/modelcontextprotocol)
 
-Trying to connect it to the web
+  - Conceptually easier to understand than Langchain.
+  - Client/Server model is a interesting concept that allows for interoptability between services and LLM's.
+  - Typescript

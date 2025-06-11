@@ -2,7 +2,6 @@ import React, { SetStateAction, useState } from 'react';
 import clsx from 'clsx';
 import { ArrowRight, Linkedin, Mail, Plus, Minus } from 'lucide-react';
 import SectionContainer from './components/SectionContainer';
-import Zipper from './components/Zipper';
 
 const imageFolder = '/img/';
 const videoFolder = '/vids/';
@@ -10,7 +9,7 @@ const videoFolder = '/vids/';
 const experience = [
   {
     company: 'Unity Technologies',
-    date: 'Apr 2021 - Present',
+    date: 'Apr 2021 - Apr 2025',
     title: 'Senior Engineer',
     description: (
       <>
@@ -21,7 +20,7 @@ const experience = [
         3D Visualization and product configurator tools.
       </>
     ),
-    skills: ['TS', 'React', 'WebGL', 'Unity', 'DevOps'],
+    skills: ['TS', 'React', 'Next', 'WebGL', 'Unity', 'DevOps'],
     images: [
       `${imageFolder}/unity/parsec-website.jpg`,
       `${imageFolder}/unity/parsec-app.jpg`,
@@ -143,7 +142,7 @@ export default () => {
 
   return (
     <div className="h-full font-[nunito] m-0 p-0">
-      <Zipper />
+      {/* <Zipper /> */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="bg-gradient-to-r from-amber-500 to-pink-500 absolute -right-12 -top-10 lg:top-16 lg:-left-24 w-48 h-48 -z-1 rounded-full overflow-hidden">
           <video
@@ -166,11 +165,10 @@ export default () => {
           <p className="text-5xl leading-tight lg:leading-snug">
             Everything Engineer
             <br />
-            Full-Stack Web, 3D, UX
+            Full-Stack Web, AI, 3D, UX
           </p>
           <p className="mt-5 text-2xl leading-tight lg:leading-snug lg:text-2l w-3/4 text-neutral-500">
-            I Have Worked on Browsers, Operating Systems and Shipped Apps at Scale. Now and Always
-            Looking for a Good Challenge.
+            Perpetually Curious, Always Learning, Always Building.
           </p>
         </div>
         <div className="my-6 lg:my-[6rem] col-span-1 flex gap-4">
@@ -189,7 +187,7 @@ export default () => {
         <div className="hidden lg:block">{/* right space */}</div>
       </div>
 
-      <SectionContainer>
+      {/* <SectionContainer>
         <div className="lg:col-span-4">
           <ul className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {articles.map((article, index) => (
@@ -213,7 +211,7 @@ export default () => {
             ))}
           </ul>
         </div>
-      </SectionContainer>
+      </SectionContainer> */}
 
       <SectionContainer>
         <div className="lg:col-span-4">
@@ -260,30 +258,32 @@ export default () => {
             <div className={clsx('lg:mx-0 lg:mt-0 text-neutral-500 order-last lg:order-none')}>
               {job.description}
 
-              <button
-                className={clsx(
-                  'text-sm cursor-pointer block text-neutral-800 px-3 py-1 rounded-lg transition-colors transition-duration-300 border border-neutral-200 bg-white mt-4',
-                  {
-                    'hover:bg-gradient-to-r hover:from-amber-500 hover:to-pink-500 hover:text-white':
-                      !isSelected,
-                  }
-                )}
-                onClick={() => setSelected(isSelected ? null : index)}
-              >
-                <div className="flex gap-2 items-center">
-                  {isSelected ? (
-                    <>
-                      <span>Close</span> <Minus size={16} />
-                    </>
-                  ) : (
-                    job.images?.length && (
-                      <>
-                        <span>More</span> <Plus size={16} />
-                      </>
-                    )
+              {job.images?.length && (
+                <button
+                  className={clsx(
+                    'text-sm cursor-pointer block text-neutral-800 px-3 py-1 rounded-lg transition-colors transition-duration-300 border border-neutral-200 bg-white mt-4',
+                    {
+                      'hover:bg-gradient-to-r hover:from-amber-500 hover:to-pink-500 hover:text-white':
+                        !isSelected,
+                    }
                   )}
-                </div>
-              </button>
+                  onClick={() => setSelected(isSelected ? null : index)}
+                >
+                  <div className="flex gap-2 items-center">
+                    {isSelected ? (
+                      <>
+                        <span>Close</span> <Minus size={16} />
+                      </>
+                    ) : (
+                      job.images?.length && (
+                        <>
+                          <span>More</span> <Plus size={16} />
+                        </>
+                      )
+                    )}
+                  </div>
+                </button>
+              )}
             </div>
             <ul className="lg:mx-0 lg:mt-0">
               {job.skills.map((skill, index) => (
